@@ -1,0 +1,9 @@
+/* START - Reset */
+* {
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Oswald', 'Roboto', 'Lato', sans-serif;
+     color: #000000;
+}
+
+/* END - Reset */
