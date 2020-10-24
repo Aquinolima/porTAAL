@@ -3,7 +3,8 @@
 	include "abrir_banco.php";
 ?>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>porTAAL - Consulta</title>
 </head>
 <fieldset>
 <legend>
@@ -11,7 +12,7 @@ Tela de consulta de dados :
 </legend>
 <center>
 <font color="red">
-	<h1> CONSULTA DE ALUNOS</h1>
+	<h1> CONSULTA DE CADASTRO</h1>
 </font>
 <table border ="1">
 	<tr>
@@ -25,7 +26,7 @@ Tela de consulta de dados :
 
 
 <?php
-	$executa2 = "SELECT codigo, nome, email, telefone FROM alunos ORDER BY codigo";
+	$executa2 = "SELECT codigo, nome, email, telefone FROM cadastro ORDER BY codigo";
 
 	$query = $mysqli->query($executa2);
 
@@ -36,8 +37,8 @@ Tela de consulta de dados :
 			echo "<td>" . $dados->nome . "</td>";
 			echo "<td>" . $dados->email . "</td>";
 			echo "<td>" . $dados->telefone . "</td>";
-			echo "<td>" . "<center><a href='consulta_alterar.php?codigo=$cod'><img src='alterar.png' width='20'></a></center>" . "</td>";
-			echo "<td>" . "<center><a href='consulta_excluir.html?codigo=$cod'><img src='excluir.png' width='20'></a></center>" . "</td></tr>";
+			echo "<td>" . "<center><a href='consulta_alterar.php?codigo=$cod'><img src='img/alterar.png' width='20'></a></center>" . "</td>";
+			echo "<td>" . "<center><a href='consulta_excluir.php?codigo=$cod'><img src='img/excluir.png' width='20'></a></center>" . "</td></tr>";
 		}
 		$query->free(); // libera a memória do servidor após cada consulta.
 
@@ -46,7 +47,7 @@ Tela de consulta de dados :
 
 </table>
 <br>
-<input type="button" value="Novo Aluno" name="novoAluno"  onclick="location.href='cadastro.html'"></p>
+<input type="button" value="Novo Cadastro" name="novoCadastro"  onclick="location.href='cadastro.html'"></p>
 
 </center>
 </fieldset>

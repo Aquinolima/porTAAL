@@ -4,7 +4,7 @@
 
 	$codigo = $_GET["codigo"];
 
-	$executa2 = "SELECT codigo, nome, email, telefone FROM alunos WHERE codigo=$codigo";
+	$executa2 = "SELECT codigo, nome, email, telefone FROM cadastro WHERE codigo=$codigo";
 
 	$query = $mysqli->query($executa2);
 
@@ -21,7 +21,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>AULA</title>
+	<title>porTAAL - Alteração</title>
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 	<input type="hidden" name="txtcodigo" value="<?php echo $codigo ?>" >
 
 	<font color="red">
-	<h1> ALTERAÇÃO DE ALUNOS </h1>
+	<h1> ALTERAÇÃO DE CADASTRO </h1>
 	</font>
 
 	<table border="0">
