@@ -1,0 +1,183 @@
+// Para rodar o sass deve-se iniciar o seguinte comando na pasta do arquivo:
+//     sass --watch node_modules/bootstrap/scss:node_modules/bootstrap/compiler node_modules/font-awesome/scss:node_modules/font-awesome/css _assets/_style/_scss:_assets/_style/_css
+
+// Start hearder and navbar
+i{
+    color: #9B2B39;;
+}
+
+header {
+    background-color: #f8f9fa;
+}
+
+header hr {
+    margin: 0px;
+}
+
+header a.nav-link {
+    background-color:  #f8f9fa;
+}
+
+header a.nav-link:hover {
+    background-color:  #f8f9fa;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+}
+
+.nav-link:hover {
+    color: #9B2B39;
+    text-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+#buttonLogin {
+    background-color: #2E879B;
+    border: none;
+    color: #f8f9fa;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    float: right;
+    display: flex;
+}
+
+#buttonLogin:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+// Start navpills
+.nav-link {
+    margin: 0px 5px;    
+}
+
+.nav-link, .nav-link:hover {
+    background-color: #2E879B;
+    color: #f8f9fa;
+}
+
+a.nav-link.nav-link.active{
+    background-color: #9B2B39;
+    border: none;
+    color: #f8f9fa;
+}
+
+a#nav-pills-01{
+    margin-bottom: 5px;
+}
+a#nav-pills-02{
+    margin-bottom: 5px;
+}
+a#nav-pills-02{
+    margin-bottom: 5px;
+}
+
+
+// Start Form contact
+a#btn-contact{
+    background-color: #2E879B;
+    color: #f8f9fa;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 16px;
+        cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    float: left;
+    display: flex;
+}
+
+a#btn-contact:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+label {
+    margin-bottom: 0px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+// Start Footer
+
+footer {
+    background-color: #f8f9fa;
+    color: #000000;
+
+}
+
+.logo-footer {
+    width: 50%;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.list-item .list-link {
+    color: #000000;
+}
+
+
+.list-link:hover {
+    color: gray;
+    text-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+#myAccount {
+    border: none;
+    color: #000000;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+#myAccount:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s;
+}

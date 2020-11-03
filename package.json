@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap4studies-",
+  "version": "1.0.0",
+  "description": "Studies and tests on Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aquinolima/bootstrap4studies-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aquinolima/bootstrap4studies-/issues"
+  },
+  "homepage": "https://github.com/Aquinolima/bootstrap4studies-#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
