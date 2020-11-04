@@ -4,17 +4,11 @@ include "abrir_banco.php";
 
 
 // capturando os dados preenchidos pelo usuário e armazenando na memória (variáveis)
-$nome = $_POST["name"];
-$email = $_POST["email"];
-$telefone = $_POST["telefone"];
-$assunto = $_POST["subject"];
-$mensagem = $_POST["mensagem"];
+$cod = $_POST["txtcodigo"];
 
 
-// alunos é uma tabela no banco de dados
-$executa = "INSERT INTO contato_site (nome_contato, email_contato, telefone_contato, assunto_contato, mensagem_contato) VALUES ('$nome','$email', '$telefone', '$assunto', '$mensagem')";
+$executa = "DELETE FROM `contato_site` WHERE `codigo`=$cod";
 
-      
 $query = $mysqli->query($executa);
 
 ?>
@@ -38,7 +32,7 @@ $query = $mysqli->query($executa);
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="display-3">Sua mensagem foi enviada com sucesso!</h1>
+                    <h1 class="display-3">O contato foi apagado com sucesso!</h1>
                     <p class="lead"> Clique no botão para voltar ao nosso site. </p>
                     <hr>
                 </div>
@@ -48,7 +42,7 @@ $query = $mysqli->query($executa);
                 <div class="col-sm-12 text-center ">
                     <ul class="nav nav-pills justify-content-center mt-5 " id="pills-nav" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" style="background-color: brown;" id="nav-pills-01" data-toggle="pill" href="../../index.php">
+                            <a class="nav-link active" style="background-color: brown;" id="nav-pills-01" data-toggle="pill" href="../../consulta_myacount.php">
                                 <h3>Voltar</h3>
                             </a>
                         </li>

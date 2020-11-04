@@ -205,12 +205,13 @@
                             <a class="list-link mx-2" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                         </li>
                     </ul>
-                    <a id="myAccount" href="login.php">My account</a>
+                    
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer  -->
+    
 
     <!-- jQuery, Popper.js, and Bootstrap JS  -->
     <script src="node_modules/jquery/dist/jquery.js"></script>

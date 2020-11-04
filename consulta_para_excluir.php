@@ -1,5 +1,27 @@
-<!doctype html>
-<html lang="pt-br">
+<?php
+// ligação entre o programa web e o banco de dados
+include "_assets/_php/abrir_banco.php";
+
+$codigo = $_GET["codigo"];
+
+$executa2 = "SELECT * FROM contato_site WHERE codigo=$codigo";
+
+$query = $mysqli->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+    $nome = $dados->nome_contato;
+    $email = $dados->email_contato;
+    $telefone = $dados->telefone_contato;
+    $assunto = $dados->assunto_contato;
+    $mensagem = $dados->mensagem_contato;
+    $data = $dados->data_contato;
+}
+$query->free(); // libera a memória do servidor após cada consulta.
+?>
+
+<!DOCTYPE html>
+<html lang="pt-Br">
 
 <head>
     <!-- Required meta tags -->
@@ -49,12 +71,9 @@
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item mx-1 my-3">
-                            <a class="nav-link btn btn-lg" href="cadastrar.php" role="button">Cadastrar</a>
+                            <a class="nav-link btn btn-lg" href="index.php" role="button">Sair</a>
                         </li>
 
-                        <li class="nav-item my-3 mx-1">
-                            <a class="nav-link btn btn-lg" href="login.php" role="button">Entrar</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -62,73 +81,55 @@
         </div>
     </header>
     <!-- End Header with Navbar -->
-    <main>
 
-        <div class="jumbotron jumbotron-fluid mb-0 py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-6 my-2 text-center">
-                        <!-- Start Embed -->
-                        <div class="embed-responsive embed-responsive-16by9 px-1">
-                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/gfkO-mec83Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <!-- End Embed -->
-                    </div>
-                    <div class="col-sm-12 col-lg-6 my-0 text-center">
-                        <div class="text-justify  px-1">
-                            <h2 class="display-4" style="color: #9B2B39;">Mais de 10 anos de
-                                experiência.
-                            </h2>
-                            <p>
-                                Somos um escritório de Arquitetura e Urbanismo que possui sede em
-                                Guarulhos-São Paulo,
-                                já está no mercado há mais de 20 anos, desenvolve projetos do mais
-                                elevado
-                                padrão,
-                                nas áreas industriais, comerciais, residenciais e corporativas.
-                                Para atingir tal finalidade a empresa conta com uma equipe de
-                                profissionais altamente qualificados e credenciados no CAU e CREA.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 my-0 text-center">
-                        <div class="text-justify  px-1">
-                            <p>
-                                Nós da TAAL não vê a realização dos projetos apenas como construções e
-                                reformas, mas como experiência de transformação na vida dos clientes.
-                                Com
-                                essa
-                                filosofia, é realizado um trabalho buscando a perfeição em cada detalhe
-                                necessário.
-                            </p>
-                            <p>
-                                Com essa filosofia criamos o porTAAL, um sistema que integra o cliente
-                                aos
-                                profissionais mais bem preparados do mercado com o selo de qualidade que
-                                só
-                                a TAAL Arquitetura possui.
-                                Afinal, seu sonho começa com um traço!
-                            </p>
-                        </div>
-                    </div>
+    <div class="jumbotron jumbotron-fluid mb-0 py-5">
+        <div class="container">
 
+            <div class="row">
+                <div class="col-sm-12 my-0 text-center">
+
+                    <!-- Aqui começa o formulário de incluir dados  -->
+                    <form method="POST" action="_assets/_php/excluir_contato.php">
+
+                        <input type="hidden" name="txtcodigo" value="<?php echo $codigo ?>">
+
+                        <h2 class="display-4" style="color: #9B2B39;">Tem certeza que deseja apagar o cadastro?</h2>
+                        <br>
+
+                        <div class="col-sm-12 my-0 text-center">
+                            
+                            <!-- Aqui começa o formulário de incluir dados  -->
+                            <form method="POST" action="_assets/_php/excluir.php">
+
+                                <input type="hidden" name="txtcodigo" value="<?php echo $codigo ?>">
+
+                                <p>
+                                   <strong>Nome:</strong><?php echo $nome ?><br>
+                                   <strong>Email:</strong><?php echo $email ?><br>
+                                   <strong>Telefone:</strong><?php echo $telefone ?><br>
+                                   <strong>Assunto:</strong><?php echo $assunto ?><br><br>
+                                   <strong>Mensagem:</strong><br> <?php echo $mensagem ?><br><br>
+                                   <strong>Data:</strong><?php echo $data ?>
+                                </p>
+
+                                <br>
+                                <input type="submit" value="Excluir" name="excluir">
+
+                                <input type="button" value="Cancelar" name="cancelar" onclick="location.href='consulta_myacount.php'"></p>
+                            </form>
+
+                        </div>
+
+
+                    <!-- Aqui termina o formulário de incluir dados, se necessário você pode substituí-lo pelo seu formulário -->
 
                 </div>
-                <!-- Start Navpills -->
-                <!--Section: Sobre Nós-->
-
-                <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
-
-                </div>
-                <!--Section: Sobre Nós-->
-
-                <!-- End Navpills -->
 
             </div>
+
         </div>
-    </main>
+    </div>
+
     <!-- Start Footer -->
     <footer>
         <div class="container mt-0">
@@ -165,13 +166,13 @@
                             <a class="list-link mx-2" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                         </li>
                     </ul>
-              
+
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer  -->
-    
+
 
     <!-- jQuery, Popper.js, and Bootstrap JS  -->
     <script src="node_modules/jquery/dist/jquery.js"></script>

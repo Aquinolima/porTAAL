@@ -120,10 +120,14 @@
                                         <hr>
                                         <ul class="nav nav-pills justify-content-center mt-5 " id="pills-nav" role="tablist">
                                             <li class="nav-item mx-2 my-2">
-                                                <a class="nav-link" href="contato.php"><h3 >Cliente</h3></a>
+                                                <a class="nav-link" href="contato.php">
+                                                    <h3>Cliente</h3>
+                                                </a>
                                             </li>
                                             <li class="nav-item mx-2 my-2">
-                                                <a class="nav-link" href="contato.php"><h3>Serviços</h3></a>
+                                                <a class="nav-link" href="contato.php">
+                                                    <h3>Serviços</h3>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -240,7 +244,7 @@
 
                                                             <div class="md-form">
                                                                 <label class="" for="mensagem">Sua Mensagem</label>
-                                                                <textarea type="text" id="message" name="mensagem" rows="2" class="form-control md-textarea" maxlength="400" size="50" required></textarea>
+                                                                <textarea type="text" id="message" name="mensagem"  class="form-control md-textarea"  maxlength="500" required></textarea>
                                                             </div>
 
                                                         </div>
@@ -330,12 +334,44 @@
                             <a class="list-link mx-2" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                         </li>
                     </ul>
-                    <a id="myAccount" href="login.php">My account</a>
+                    <a id="myAccount" data-toggle="modal" data-target="#siteModal">My account</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer  -->
+
+    <!-- Start Modal  -->
+    <div class="modal fade" id="siteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sistema - porTAAL Arquitetura</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+                        <div class="form-group">
+                            <label for="loginAdm" class="col-form-label">Login:</label>
+                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="senhaAdm" class="col-form-label">Senha:</label>
+                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
 
     <!-- jQuery, Popper.js, and Bootstrap JS  -->
     <script src="node_modules/jquery/dist/jquery.js"></script>
