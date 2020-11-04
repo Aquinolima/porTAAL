@@ -71,44 +71,50 @@ include "_assets/_php/abrir_banco.php";
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 my-0 text-center">
-					<table border="1">
-						<tr>
-							<th>CODIGO</th>
-							<th>NOME</th>
-							<th>EMAIL</th>
-							<th>TELEFONE</th>
-							<th>ASSUNTO</th>
-							<th>MENSAGEM</th>
-							<th>DATA</th>
-							<th>EXCLUIR</th>
-						</tr>
+				<div class="col-sm-12 col-xs-4 my-0 text-center">.
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Nome</th>
+									<th scope="col">Email</th>
+									<th scope="col">Telefone</th>
+									<th scope="col">Assunto</th>
+									<th scope="col">Mensagem</th>
+									<th scope="col">Data</th>
+									<th scope="col">Excluir</th>
+								</tr>
+							</thead>
 
 
-						<?php
-						$executa2 = "SELECT * FROM contato_site ORDER BY codigo";
+							<?php
+							$executa2 = "SELECT * FROM contato_site ORDER BY codigo";
 
-						$query = $mysqli->query($executa2);
+							$query = $mysqli->query($executa2);
 
-						while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
-						{
-							$cod =  $dados->codigo;
-							echo "<tr><th>" . $cod . "</th>";
-							echo "<td>" . $dados->nome_contato . "</td>";
-							echo "<td>" . $dados->email_contato . "</td>";
-							echo "<td>" . $dados->telefone_contato . "</td>";
-							echo "<td>" . $dados->assunto_contato . "</td>";
-							echo "<td>" . $dados->mensagem_contato . "</td>";
-							echo "<td>" . $dados->data_contato . "</td>";
+							while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+							{
+								$cod =  $dados->codigo;
+								echo "<tbody>";
+								echo "<tr><th scope='row'>" . $cod . "</th>";
+								echo "<td>" . $dados->nome_contato . "</td>";
+								echo "<td>" . $dados->email_contato . "</td>";
+								echo "<td>" . $dados->telefone_contato . "</td>";
+								echo "<td>" . $dados->assunto_contato . "</td>";
+								echo "<td>" . $dados->mensagem_contato . "</td>";
+								echo "<td>" . $dados->data_contato . "</td>";
 
-							echo "<td>" . "<center><a href='consulta_para_excluir.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
-						}
-						$query->free(); // libera a memória do servidor após cada consulta.
+								echo "<td>" . "<center><a href='consulta_para_excluir.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
+								echo "</tbody>";
+							}
+							$query->free(); // libera a memória do servidor após cada consulta.
 
-						?>
+							?>
 
 
-					</table>
+						</table>
+					</div>
 				</div>
 
 
