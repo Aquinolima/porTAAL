@@ -75,7 +75,7 @@
                                 </a>
                             </li>
                             <li class="nav-item my-2">
-                                <a id="formServiços" data-toggle="modal" data-target="#form-modal-cadatro-serviços" class="nav-link text-center my-auto" style="width: 10rem; height: 3rem;" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
+                                <a id="formServiços" data-toggle="modal" data-target="#form-modal-cadastro-serviços" class="nav-link text-center my-auto" style="width: 10rem; height: 3rem;" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
                                     <h4>Serviços</h4>
                                 </a>
                             </li>
@@ -167,7 +167,7 @@
 
 
 
-                    <form id="cadastro-cliente-form" name="cadastro-cliente-form" action="_assets/_php/valida_cadastro_cliente.php" method="POST">
+                    <form id="cadastro-cliente-form" name="cadastro-cliente-form" action="_assets/_php/grava_cadastro_cliente.php" method="POST">
                         <div class="row justify-content-center mb-5 mx-3">
 
                             <div class="form-row">
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCep">Seu CEP</label>
-                                    <input type="text" class="form-control" onkeypress="$(this).mask('00.000-000')" id="inputCep" placeholder="Cep" required>
+                                    <input type="text" class="form-control" id="inputCep" placeholder="Cep" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCidade">Sua Cidade</label>
@@ -238,8 +238,8 @@
                                     <input type="text" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                 </div>
 
-                                <div class="form-group col-sm-10">
-                                    <div class="form-check">
+                                <div class="form-group col-sm-6">
+                                    <div class="form-check mt-3">
                                         <label class="form-check-label">
                                             <input type="checkbox" class="form-check-input" id="inputCheckEmail"> Desejo receber
                                             novidades por e-mail!
@@ -250,6 +250,13 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label for="inputPass">Sua Senha </label>
+                                    <input type="text" class="form-control" id="inputPass" placeholder="Senha" required>
+                                </div>
+
+                              
                                 <div class="modal-footer ">
                                     <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
                                     <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
@@ -265,9 +272,10 @@
 
     <!-- End Modal -->
 
-    <!-- Start Modal Login Serviços -->
-    <div class="modal fade" id="form-modal-login-serviços" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    
+    <!-- Start Modal Cadastro Serviços -->
+    <div class="modal fade" id="form-modal-cadastro-serviços" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 style="color: #9B2B39;"><img src="_assets/_icons/logo_portaal.png" alt="logo porTAAL"> - porTAAL Arquitetura</h5>
@@ -277,31 +285,121 @@
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <h5 class="modal-title text-center" style="color: #9B2B39;" id="exampleModalLabel">Login - Perfil de Serviços</h5>
+                        <h5 class="modal-title text-center" style="color: #9B2B39;" id="exampleModalLabel">Cadastro - Perfil de Serviços</h5>
                         <br>
-                        <p>Bem-vindo ao sistema porTAAL! <br>Sigite seu email e senha para entrar.</p>
+                        <p>Bem-vindo ao sistema porTAAL! <br>Preencha os campos para realizar seu cadastro.</p>
                     </div>
                     <hr>
 
-                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
-                        <div class="form-group">
-                            <label for="loginAdm" class="col-form-label">Login:</label>
-                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="senhaAdm" class="col-form-label">Senha:</label>
-                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
-                        </div>
-                        <div class="modal-footer ">
-                            <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
+
+
+                    <form id="cadastro-cliente-form" name="cadastro-cliente-form" action="_assets/_php/grava_cadastro_serviços.php" method="POST">
+                        <div class="row justify-content-center mb-5 mx-3">
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="inputNome">Seu Nome</label>
+                                    <input type="text" class="form-control" id="inputNome" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="inputSobrenome">Seu Sobrenome</label>
+                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+                                </div>
+                                <div class="form-group col-sm-8">
+                                    <label for="inputEnd">Seu Endereço</label>
+                                    <input type="text" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="inputProf">Sua Profissão</label>
+                                    <input type="text" class="form-control" id="inputProf" placeholder="Profissão" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="inputCep">Seu CEP</label>
+                                    <input type="text" class="form-control"  id="inputCep" placeholder="Cep" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="inputCidade">Sua Cidade</label>
+                                    <input type="text" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="selectEst">Seu Estado</label>
+                                    <select name="estado" id="selectEst" class="form-control" required>
+                                        <option value="..." selected>Escolha ...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                        <option value="EX">Estrangeiro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="inputTel">Seu Telefone</label>
+                                    <input type="text" class="form-control" id="inputTel" placeholder="Telefone" required>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label for="inputCel">Seu Celular</label>
+                                    <input type="text" class="form-control" id="inputCel" placeholder="Celular" required>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="inputEmail">Seu E-mail </label>
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <div class="form-check mt-3">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" id="inputCheckEmail"> Desejo receber
+                                            novidades por e-mail!
+                                        </label>
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" id="inputCheckCel"> Desejo receber
+                                            novidades por whatsApp!
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label for="inputPass">Sua Senha </label>
+                                    <input type="text" class="form-control" id="inputPass" placeholder="Senha" required>
+                                </div>
+
+                              
+                                <div class="modal-footer ">
+                                    <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
+                                    <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
+
     <!-- End Modal -->
 
 

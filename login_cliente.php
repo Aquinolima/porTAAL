@@ -13,7 +13,7 @@
 
 
 
-     <title>porTAAL Arquitetura</title>
+    <title>porTAAL Arquitetura</title>
 </head>
 
 <body>
@@ -63,26 +63,30 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center my-3">
-                        <h1 class="display-2"><i class="fas fa-user-astronaut display-2" style="color:#2E879B;"></i> Login <i class="fas fa-meteor" style="color:#2E879B;"></i></h1>
-                        <p>Bem-vindo ao sistema porTAAL! <br><br> Em qual perfil você quer entrar?</p>
+                        <h1 class="display-2"><i class="fas fa-user-astronaut display-3" style="color:#2E879B;"></i> Login <i class="fas fa-meteor display-3" style="color:#2E879B;"></i></h1>
+                        <p>Bem-vindo ao sistema porTAAL! <br><br> Digite seu e-mail e senha!</p>
                     </div>
                 </div>
                 <hr>
-
-                <div class="row my-5">
+                <div class="row">
                     <div class="col-12">
-                        <ul class="nav nav-pills justify-content-center " id="pills-nav" role="tablist">
-                            <li class="nav-item my-2">
-                                <a id="formCliente" href="login_cliente.php" class="nav-link text-center my-auto active" style="width: 10rem; height: 3rem;" >
-                                    <h4>Cliente</h4>
-                                </a>
-                            </li>
-                            <li class="nav-item my-2">
-                                <a id="formServiços" data-toggle="modal" data-target="#form-modal-login-serviços" class="nav-link text-center my-auto" style="width: 10rem; height: 3rem;" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
-                                    <h4>Serviços</h4>
-                                </a>
-                            </li>
-                        </ul>
+                        <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+
+                            <div class="form-group col-sm-4 my-0 mx-auto">
+                                <label for="loginAdm" class="col-form-label">Login:</label>
+                                <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                            </div>
+                            <div class="form-group col-sm-4 my-0 mx-auto">
+                                <label for="senha_cliente" class="col-form-label">Senha:</label>
+                                <input type="password" name="senha_cliente" class="form-control" id="contact-phone">
+                            </div>
+                            <div class="form-group col-sm-4  my-3 mx-auto">
+                                <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Entrar</button>
+                            </div>
+                        </form>
+                        <div class="form-group col-sm-4  my-3 mx-auto">
+                            <a class="forget_pass" style="color: #9B2B39;" href="login_cliente.php">Esqueci minha senha!</a>
+                        </div>
                     </div>
                 </div>
 
