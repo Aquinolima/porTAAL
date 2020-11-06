@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -11,7 +14,6 @@
     <link rel="stylesheet" href="_assets/_style/_css/style.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/all.css">
     <script src="node_modules/font-awesome/js/all.js"></script>
-
     <title>porTAAL Arquitetura</title>
 </head>
 
@@ -97,205 +99,202 @@
                             <!--Section: Serviços-->
                             <div class="tab-pane fade show active " id="nav-item-01" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-sm-4 mt-4 text-center ">
+                                    <div class="col-sm-3 col-xs-6 mt-4 text-center ">
                                         <p><i class="fas fa-search-dollar display-2" style="color: #2E879B;"></i></p>
                                         <p>Obtenha o preço e o tempo
                                             para o serviço desejado.</p>
                                     </div>
-                                    <div class="col-sm-4 mt-4 text-center">
+                                    <div class="col-sm-3 col-xs-6 mt-4 text-center">
                                         <p><i class="fas fa-calendar-alt display-2" style="color: #2E879B;"></i></p>
                                         <p>Agende o melhor dia e horário
                                             para realização do serviço.</p>
                                     </div>
-                                    <div class="col-sm-4 mt-4 text-center">
+                                    <div class="col-sm-3 col-xs-6 mt-4 text-center">
                                         <h1><i class="fas fa-handshake display-2" style="color:#2E879B;"></i></h1>
                                         <p>Tenha a garantia de 3 meses
                                             para os serviços realizados.</p>
                                     </div>
+                                    <div class="col-sm-3  col-xs-6 mt-4 text-center">
+                                        <h1><i class="fas fa-medal display-2" style="color:#2E879B;"></i></h1>
+                                        <p>Profissionais com o certificado de qualidade da TAAL.</p>
+                                    </div>
                                 </div>
-                                <div class="row">
+                                < <div class="row">
                                     <div class="col-sm-12 mt-5 text-center ">
                                         <hr>
                                         <p class=" display-4" style="color: #9B2B39;"><b>Faça seu cadastro!</b></p>
                                         <hr>
-                                        <ul class="nav nav-pills justify-content-center mt-5 " id="pills-nav" role="tablist">
-                                            <li class="nav-item mx-2 my-2">
-                                                <a class="nav-link" href="contato.php">
-                                                    <h3>Cliente</h3>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item mx-2 my-2">
-                                                <a class="nav-link" href="contato.php">
-                                                    <h3>Serviços</h3>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
 
+                                        <a class="nav-link my-auto mx-auto col-sm-4" href="cadastrar.php">
+                                            <h4 class="my-auto">Cadastrar</h4>
+                                        </a>
+
+                                    </div>
                             </div>
-                            <!--Section: Serviços-->
-                            <!--Section: Sobre Nós-->
 
-                            <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-6 my-2 text-center">
-                                        <!-- Start Embed -->
-                                        <div class="embed-responsive embed-responsive-16by9 px-1">
-                                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/gfkO-mec83Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        </div>
-                                        <!-- End Embed -->
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6 my-0 text-center">
-                                        <div class="text-justify  px-1">
-                                            <h2 class="display-4" style="color: #9B2B39;">Mais de 10 anos de
-                                                experiência.
-                                            </h2>
-                                            <p>
-                                                Somos um escritório de Arquitetura e Urbanismo que possui sede em
-                                                Guarulhos-São Paulo,
-                                                já está no mercado há mais de 20 anos, desenvolve projetos do mais
-                                                elevado
-                                                padrão,
-                                                nas áreas industriais, comerciais, residenciais e corporativas.
-                                                Para atingir tal finalidade a empresa conta com uma equipe de
-                                                profissionais altamente qualificados e credenciados no CAU e CREA.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 my-0 text-center">
-                                        <div class="text-justify  px-1">
-                                            <p>
-                                                Nós da TAAL não vê a realização dos projetos apenas como construções e
-                                                reformas, mas como experiência de transformação na vida dos clientes.
-                                                Com
-                                                essa
-                                                filosofia, é realizado um trabalho buscando a perfeição em cada detalhe
-                                                necessário.
-                                            </p>
-                                            <p>
-                                                Com essa filosofia criamos o porTAAL, um sistema que integra o cliente
-                                                aos
-                                                profissionais mais bem preparados do mercado com o selo de qualidade que
-                                                só
-                                                a TAAL Arquitetura possui.
-                                                Afinal, seu sonho começa com um traço!
-                                            </p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                            <!--Section: Sobre Nós-->
-
-                            <!--Section: Contato-->
-                            <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
-                                <div class="row">
-                                    <section class="col-sm-12 my-0 text-center mb-4">
-                                        <h2 class="text-center my-3 display-4" style="color: #9B2B39;">Contato</h2>
-                                        <p class="text-center w-responsive mx-auto mb-5">Você tem alguma dúvida?
-                                            Fale conosco agora mesmo. Nosso time respoderá em poucas horas.</p>
-
-                                        <div class="row">
-
-                                            <!--Form Contato-->
-                                            <div class="col-md-9 mb-md-0 my-3">
-                                                <form id="contact-form" name="contact-form" action="_assets/_php/grava_contato.php" method="POST">
-
-                                                    <div class="row">
-
-                                                        <div class="col-md-6 text-left">
-                                                            <div class="md-form mb-0">
-                                                                <label for="name" class="">Seu Nome</label>
-                                                                <input type="text" id="name" name="name" class="form-control" maxlength="50" size="50" required>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-6 text-left">
-                                                            <div class="md-form mb-0">
-                                                                <label for="email" class="">Seu Email</label>
-                                                                <input type="text" id="email" name="email" class="form-control" maxlength="50" size="50" required>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-6 text-left">
-                                                            <div class="md-form mb-0">
-                                                                <label for="subject" class="">Assunto</label>
-                                                                <input type="text" id="subject" name="subject" class="form-control" maxlength="50" size="50" required>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-6 text-left">
-                                                            <div class="md-form mb-0">
-                                                                <label for="telefone" class="">Telefone</label>
-                                                                <input type="text" id="telefone" name="telefone" class="form-control" maxlength="20" size="20" required>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-12 text-left">
-
-                                                            <div class="md-form">
-                                                                <label class="" for="mensagem">Sua Mensagem</label>
-                                                                <textarea type="text" id="message" name="mensagem"  class="form-control md-textarea"  maxlength="500" required></textarea>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-12 text-left">
-
-                                                            <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
-                                                            color: #f8f9fa;" id="btn-contact-sub" type="submit" value="Enviar" name="enviar">
-                                                            <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
-                                                            color: #f8f9fa;" id="btn-contact-res" type="reset" value="Limpar" name="limpar">
-                                                        </div>
-                                                    </div>
-
-
-                                                </form>
-                                            </div>
-                                            <!--End - Form Contato-->
-
-
-                                            <div class="col-md-3 text-center">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><i class="fas fa-map-marker-alt fa-2x" style="color: #9B2B39;"></i>
-                                                        <p>Guarulhos, SP 07121-240</p>
-                                                    </li>
-
-                                                    <li><i class="fas fa-phone mt-4 fa-2x" style="color: #9B2B39;"></i>
-                                                        <p>11 98571-8918 / 11 2468-8927</p>
-                                                    </li>
-
-                                                    <li><i class="fas fa-envelope mt-4 fa-2x" style="color: #9B2B39;"></i>
-                                                        <p>taalarquitetura@gmail.com</p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-
-                                    </section>
-                                </div>
-                            </div>
-                            <!--Section: Contato-->
                         </div>
+                        <!--Section: Serviços-->
+                        <!--Section: Sobre Nós-->
+
+                        <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6 my-2 text-center">
+                                    <!-- Start Embed -->
+                                    <div class="embed-responsive embed-responsive-16by9 px-1">
+                                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/gfkO-mec83Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- End Embed -->
+                                </div>
+                                <div class="col-sm-12 col-lg-6 my-0 text-center">
+                                    <div class="text-justify  px-1">
+                                        <h2 class="display-4" style="color: #9B2B39;">Mais de 10 anos de
+                                            experiência.
+                                        </h2>
+                                        <p>
+                                            Somos um escritório de Arquitetura e Urbanismo que possui sede em
+                                            Guarulhos-São Paulo,
+                                            já está no mercado há mais de 20 anos, desenvolve projetos do mais
+                                            elevado
+                                            padrão,
+                                            nas áreas industriais, comerciais, residenciais e corporativas.
+                                            Para atingir tal finalidade a empresa conta com uma equipe de
+                                            profissionais altamente qualificados e credenciados no CAU e CREA.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 my-0 text-center">
+                                    <div class="text-justify  px-1">
+                                        <p>
+                                            Nós da TAAL não vê a realização dos projetos apenas como construções e
+                                            reformas, mas como experiência de transformação na vida dos clientes.
+                                            Com
+                                            essa
+                                            filosofia, é realizado um trabalho buscando a perfeição em cada detalhe
+                                            necessário.
+                                        </p>
+                                        <p>
+                                            Com essa filosofia criamos o porTAAL, um sistema que integra o cliente
+                                            aos
+                                            profissionais mais bem preparados do mercado com o selo de qualidade que
+                                            só
+                                            a TAAL Arquitetura possui.
+                                            Afinal, seu sonho começa com um traço!
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--Section: Sobre Nós-->
+
+                        <!--Section: Contato-->
+                        <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
+                            <div class="row">
+                                <section class="col-sm-12 my-0 text-center mb-4">
+                                    <h2 class="text-center my-3 display-4" style="color: #9B2B39;">Contato</h2>
+                                    <p class="text-center w-responsive mx-auto mb-5">Você tem alguma dúvida?
+                                        Fale conosco agora mesmo. Nosso time respoderá em poucas horas.</p>
+
+                                    <div class="row">
+
+                                        <!--Form Contato-->
+                                        <div id="form-itens-list" class="col-md-9 mb-md-0 my-3 mx-0">
+                                            <form id="contact-form" name="contact-form" action="_assets/_php/grava_contato.php" method="POST">
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 text-left">
+                                                        <div class="md-form mb-0">
+                                                            <label for="name" class="">Seu Nome</label>
+                                                            <input type="text" id="name" name="name" class="form-control" maxlength="50" size="50" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 text-left">
+                                                        <div class="md-form mb-0">
+                                                            <label for="email" class="">Seu Email</label>
+                                                            <input type="text" id="email" name="email" class="form-control" maxlength="50" size="50" required>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 text-left">
+                                                        <div class="md-form mb-0">
+                                                            <label for="subject" class="">Assunto</label>
+                                                            <input type="text" id="subject" name="subject" class="form-control" maxlength="50" size="50" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 text-left">
+                                                        <div class="md-form mb-0">
+                                                            <label for="telefone" class="">Telefone</label>
+                                                            <input type="text" id="telefone" name="telefone" class="form-control" maxlength="20" size="20" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12 text-left">
+
+                                                        <div class="md-form">
+                                                            <label class="" for="mensagem">Sua Mensagem</label>
+                                                            <textarea type="text" id="message" name="mensagem" class="form-control md-textarea" maxlength="500" required></textarea>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12 text-left">
+
+                                                        <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
+                                                            color: #f8f9fa;" id="btn-contact-sub" type="submit" value="Enviar" name="enviar">
+                                                        <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
+                                                            color: #f8f9fa;" id="btn-contact-res" type="reset" value="Limpar" name="limpar">
+                                                    </div>
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                        <!--End - Form Contato-->
+
+
+                                        <div class="col-md-3 text-center">
+                                            <ul class="list-unstyled mb-0">
+                                                <li><i class="fas fa-map-marker-alt fa-2x" style="color: #9B2B39;"></i>
+                                                    <p>Guarulhos, SP 07121-240</p>
+                                                </li>
+
+                                                <li><i class="fas fa-phone mt-4 fa-2x" style="color: #9B2B39;"></i>
+                                                    <p>11 98571-8918 / 11 2468-8927</p>
+                                                </li>
+
+                                                <li><i class="fas fa-envelope mt-4 fa-2x" style="color: #9B2B39;"></i>
+                                                    <p>taalarquitetura@gmail.com</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                        <!--Section: Contato-->
                     </div>
                 </div>
-
-
-                <!-- End Navpills -->
-
             </div>
+
+
+            <!-- End Navpills -->
+
+        </div>
         </div>
     </main>
     <!-- Start Footer -->

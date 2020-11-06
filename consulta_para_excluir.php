@@ -6,7 +6,7 @@ $codigo = $_GET["codigo"];
 
 $executa2 = "SELECT * FROM contato_site WHERE codigo=$codigo";
 
-$query = $mysqli->query($executa2);
+$query = $conn->query($executa2);
 
 while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
 {
@@ -115,7 +115,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                 <br>
                                 <input type="submit" value="Excluir" name="excluir">
 
-                                <input type="button" value="Cancelar" name="cancelar" onclick="location.href='consulta_myacount.php'"></p>
+                                <input type="button" value="Cancelar" name="cancelar" onclick="location.href='consulta_myacount.php'">
                             </form>
 
                         </div>

@@ -5,14 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="_assets/_style/_css/style.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/all.css">
     <script src="node_modules/font-awesome/js/all.js"></script>
-
-    <title>porTAAL Arquitetura</title>
+     <title>porTAAL Arquitetura</title>
 </head>
 
 <body>
@@ -24,7 +22,6 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSite">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
@@ -59,113 +56,52 @@
     </header>
     <!-- End Header with Navbar -->
     <main>
-
         <div class="jumbotron jumbotron-fluid mb-0 py-5">
             <div class="container">
                 <div class="row">
-                    <div class="row">
-                        <section class="col-sm-12 my-0 text-center mb-4">
-                            <h2 class="text-center my-3 display-4" style="color: #9B2B39;">Login</h2>
-                            <p class="text-center w-responsive mx-auto mb-5">Bem-vindo ao porTAAL! <br>
-                                Digite o e-mail e a senha cadastrada.</p>
-
-                            <div class="row">
-
-                                <!--Form Contato-->
-                                <div class="col-md-9 mb-md-0 my-3">
-                                    <form id="contact-form" name="contact-form" action="_assets/_php/grava_contato.php" method="POST">
-
-                                        <div class="row">
-
-                                            <div class="col-md-6 text-left">
-                                                <div class="md-form mb-0">
-                                                    <label for="name" class="">Seu Nome</label>
-                                                    <input type="text" id="name" name="name" class="form-control" maxlength="50" size="50" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6 text-left">
-                                                <div class="md-form mb-0">
-                                                    <label for="email" class="">Seu Email</label>
-                                                    <input type="text" id="email" name="email" class="form-control" maxlength="50" size="50" required>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-6 text-left">
-                                                <div class="md-form mb-0">
-                                                    <label for="subject" class="">Assunto</label>
-                                                    <input type="text" id="subject" name="subject" class="form-control" maxlength="50" size="50" required>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6 text-left">
-                                                <div class="md-form mb-0">
-                                                    <label for="telefone" class="">Telefone</label>
-                                                    <input type="text" id="telefone" name="telefone" class="form-control" maxlength="20" size="20" required>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12 text-left">
-
-                                                <div class="md-form">
-                                                    <label class="" for="mensagem">Sua Mensagem</label>
-                                                    <textarea type="text" id="message" name="mensagem" rows="2" class="form-control md-textarea" maxlength="400" size="50" required></textarea>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12 text-left">
-
-                                                <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
-                                                            color: #f8f9fa;" id="btn-contact-sub" type="submit" value="Enviar" name="enviar">
-                                                <input class="btn btn-lg mt-3" style="background-color: #2E879B;                                                          border: none;
-                                                            color: #f8f9fa;" id="btn-contact-res" type="reset" value="Limpar" name="limpar">
-                                            </div>
-                                        </div>
-
-
-                                    </form>
-                                </div>
-                                <!--End - Form Contato-->
-
-
-                                <div class="col-md-3 text-center">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="fas fa-map-marker-alt fa-2x" style="color: #9B2B39;"></i>
-                                            <p>Guarulhos, SP 07121-240</p>
-                                        </li>
-
-                                        <li><i class="fas fa-phone mt-4 fa-2x" style="color: #9B2B39;"></i>
-                                            <p>11 98571-8918 / 11 2468-8927</p>
-                                        </li>
-
-                                        <li><i class="fas fa-envelope mt-4 fa-2x" style="color: #9B2B39;"></i>
-                                            <p>taalarquitetura@gmail.com</p>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                        </section>
+                    <div class="col-12 text-center my-3">
+                        <h1 class="display-2"><i class="fas fa-user-astronaut display-2" style="color:#2E879B;"></i> Login <i class="fas fa-meteor" style="color:#2E879B;"></i></h1>
+                        <p>Bem-vindo ao sistema porTAAL! <br><br> Em qual perfil você quer entrar?</p>
                     </div>
                 </div>
-                <!-- Start Navpills -->
-                <!--Section: Contato-->
-                <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
-
+                <hr>
+                <div class="row my-5">
+                    <div class="col-12">
+                        <ul class="nav nav-pills justify-content-center " id="pills-nav" role="tablist">
+                            <li class="nav-item my-2">
+                                <a id="formCliente" data-toggle="modal" data-target="#form-modal-login-cliente" class="nav-link text-center my-auto active" style="width: 10rem; height: 3rem;" id="nav-pills-01" data-toggle="pill" href="#nav-item-01">
+                                    <h4>Cliente</h4>
+                                </a>
+                            </li>
+                            <li class="nav-item my-2">
+                                <a id="formServiços" data-toggle="modal" data-target="#form-modal-login-serviços" class="nav-link text-center my-auto" style="width: 10rem; height: 3rem;" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
+                                    <h4>Serviços</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!--Section: Contato-->
-
-                <!-- End Navpills -->
-
+                <hr>
+                <div class="row my-3 justify-content-center">
+                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem;">
+                        <div class=" text-center">
+                            <h3><i class="fas fa-map-marker-alt mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
+                            <p>Guarulhos, SP 07121-240</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem; ">
+                        <div class=" text-center">
+                            <h3><i class="fas fa-phone mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
+                            <p>11 98571-8918 / 11 2468-8927</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem; ">
+                        <div class=" text-center">
+                            <h3><i class="fas fa-envelope mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
+                            <p>taalarquitetura@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -193,7 +129,6 @@
                             <a class="list-link" href="contato.php">Contato</a>
                         </li>
                     </ul>
-
                 </div>
                 <div class="col-4 pt-2">
                     <ul class="list-group mb-3 justify-content-center">
@@ -205,17 +140,93 @@
                             <a class="list-link mx-2" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                         </li>
                     </ul>
-                   
+                </div>
             </div>
         </div>
     </footer>
     <!-- End Footer  -->
-    
+
+    <!-- Start Modal Login Clientes -->
+    <div class="modal fade" id="form-modal-login-cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 style="color: #9B2B39;"><img src="_assets/_icons/logo_portaal.png" alt="logo porTAAL"> - porTAAL Arquitetura</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <h5 class="modal-title text-center" style="color: #9B2B39;" id="exampleModalLabel">Login - Perfil de Cliente</h5>
+                        <br>
+                        <p>Bem-vindo ao sistema porTAAL! <br>Sigite seu email e senha para entrar.</p>
+                    </div>
+                    <hr>
+                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+                        <div class="form-group">
+                            <label for="loginAdm" class="col-form-label">Login:</label>
+                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="senhaAdm" class="col-form-label">Senha:</label>
+                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Start Modal Login Serviços -->
+    <div class="modal fade" id="form-modal-login-serviços" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 style="color: #9B2B39;"><img src="_assets/_icons/logo_portaal.png" alt="logo porTAAL"> - porTAAL Arquitetura</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <h5 class="modal-title text-center" style="color: #9B2B39;" id="exampleModalLabel">Login - Perfil de Serviços</h5>
+                        <br>
+                        <p>Bem-vindo ao sistema porTAAL! <br>Sigite seu email e senha para entrar.</p>
+                    </div>
+                    <hr>
+                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+                        <div class="form-group">
+                            <label for="loginAdm" class="col-form-label">Login:</label>
+                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="senhaAdm" class="col-form-label">Senha:</label>
+                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+
     <!-- jQuery, Popper.js, and Bootstrap JS  -->
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
 </body>
 
 </html>

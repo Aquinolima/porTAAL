@@ -70,8 +70,10 @@ include "_assets/_php/abrir_banco.php";
 					</div>
 				</div>
 			</div>
+
+
 			<div class="row">
-				<div class="col-sm-12 col-xs-4 my-0 text-center">.
+				<div class="col-sm-12 col-xs-6 my-0 text-center">.
 					<div class="table-responsive">
 						<table class="table table-hover">
 							<thead>
@@ -89,9 +91,10 @@ include "_assets/_php/abrir_banco.php";
 
 
 							<?php
+							
 							$executa2 = "SELECT * FROM contato_site ORDER BY codigo";
 
-							$query = $mysqli->query($executa2);
+							$query = $conn->query($executa2);
 
 							while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
 							{
@@ -111,18 +114,17 @@ include "_assets/_php/abrir_banco.php";
 							$query->free(); // libera a memória do servidor após cada consulta.
 
 							?>
-
-
 						</table>
 					</div>
 				</div>
-
-
 			</div>
+
+			<hr>
+
 
 		</div>
 	</div>
-
+	
 	<!-- Start Footer -->
 	<footer>
 		<div class="container mt-0">
