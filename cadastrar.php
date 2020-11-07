@@ -173,27 +173,27 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <label for="inputNome">Seu Nome</label>
-                                    <input type="text" class="form-control" id="inputNome" placeholder="Nome" required>
+                                    <input type="text" name="nome_cliente" class="form-control" id="inputNome" placeholder="Nome" required>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputSobrenome">Seu Sobrenome</label>
-                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+                                    <input type="text" name="sobrenome_cliente" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                 </div>
                                 <div class="form-group col-sm-12">
                                     <label for="inputEnd">Seu Endereço</label>
-                                    <input type="text" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
+                                    <input type="text" name="endereço_cliente" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCep">Seu CEP</label>
-                                    <input type="text" class="form-control" id="inputCep" placeholder="Cep" required>
+                                    <input type="text" name="cep_cliente" class="form-control" id="inputCep" placeholder="Cep" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCidade">Sua Cidade</label>
-                                    <input type="text" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                                    <input type="text" name="cidade_cliente" class="form-control" id="inputCidade" placeholder="Cidade" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="selectEst">Seu Estado</label>
-                                    <select name="estado" id="selectEst" class="form-control" required>
+                                    <select name="estado_cliente" id="selectEst" class="form-control" required>
                                         <option value="..." selected>Escolha ...</option>
                                         <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
@@ -227,25 +227,25 @@
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="inputTel">Seu Telefone</label>
-                                    <input type="text" class="form-control" id="inputTel" placeholder="Telefone" required>
+                                    <input type="text" name="telefone_cliente" class="form-control" id="inputTel" placeholder="Telefone" required>
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="inputCel">Seu Celular</label>
-                                    <input type="text" class="form-control" id="inputCel" placeholder="Celular" required>
+                                    <input type="text" name="celular_cliente" class="form-control" id="inputCel" placeholder="Celular" required>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputEmail">Seu E-mail </label>
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                    <input type="text" name="email_cliente" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                 </div>
 
                                 <div class="form-group col-sm-6">
                                     <div class="form-check mt-3">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" id="inputCheckEmail"> Desejo receber
+                                            <input type="checkbox" name="pref_contato_email" value="email" class="form-check-input" id="inputCheckEmail"> Desejo receber
                                             novidades por e-mail!
                                         </label>
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" id="inputCheckCel"> Desejo receber
+                                            <input type="checkbox" name="pref_contato_cel"  value="celular" class="form-check-input" id="inputCheckCel"> Desejo receber
                                             novidades por whatsApp!
                                         </label>
                                     </div>
@@ -253,7 +253,7 @@
 
                                 <div class="form-group col-sm-6">
                                     <label for="inputPass">Sua Senha </label>
-                                    <input type="text" class="form-control" id="inputPass" placeholder="Senha" required>
+                                    <input type="text" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
                               
@@ -299,31 +299,31 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <label for="inputNome">Seu Nome</label>
-                                    <input type="text" class="form-control" id="inputNome" placeholder="Nome" required>
+                                    <input type="text" name="nome_cliente_serviço" class="form-control" id="inputNome" placeholder="Nome" required>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputSobrenome">Seu Sobrenome</label>
-                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+                                    <input type="text" name="sobrenome_cliente_serviço" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                 </div>
                                 <div class="form-group col-sm-8">
                                     <label for="inputEnd">Seu Endereço</label>
-                                    <input type="text" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
+                                    <input type="text" name="endereço_cliente_serviço" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputProf">Sua Profissão</label>
-                                    <input type="text" class="form-control" id="inputProf" placeholder="Profissão" required>
+                                    <input type="text" name="profissão_cliente_serviço" class="form-control" id="inputProf" placeholder="Profissão" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCep">Seu CEP</label>
-                                    <input type="text" class="form-control"  id="inputCep" placeholder="Cep" required>
+                                    <input type="text" name="cep_cliente_serviço" class="form-control"  id="inputCep" placeholder="Cep" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCidade">Sua Cidade</label>
-                                    <input type="text" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                                    <input type="text" name="cidade_cliente_serviço" class="form-control" id="inputCidade" placeholder="Cidade" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="selectEst">Seu Estado</label>
-                                    <select name="estado" id="selectEst" class="form-control" required>
+                                    <select name="estado_cliente_serviço" id="selectEst" class="form-control" required>
                                         <option value="..." selected>Escolha ...</option>
                                         <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
@@ -357,25 +357,25 @@
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="inputTel">Seu Telefone</label>
-                                    <input type="text" class="form-control" id="inputTel" placeholder="Telefone" required>
+                                    <input type="text" name="telefone_cliente_serviço" class="form-control" id="inputTel" placeholder="Telefone" required>
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="inputCel">Seu Celular</label>
-                                    <input type="text" class="form-control" id="inputCel" placeholder="Celular" required>
+                                    <input type="text" name="celular_cliente_serviço" class="form-control" id="inputCel" placeholder="Celular" required>
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputEmail">Seu E-mail </label>
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                    <input type="text" name="email_cliente_serviço" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                 </div>
 
                                 <div class="form-group col-sm-6">
                                     <div class="form-check mt-3">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" id="inputCheckEmail"> Desejo receber
+                                            <input type="checkbox" name="pref_contato_email" value="email" class="form-check-input" id="inputCheckEmail"> Desejo receber
                                             novidades por e-mail!
                                         </label>
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" id="inputCheckCel"> Desejo receber
+                                            <input type="checkbox" name="pref_contato_cel" value="celular" class="form-check-input" id="inputCheckCel"> Desejo receber
                                             novidades por whatsApp!
                                         </label>
                                     </div>
@@ -383,7 +383,7 @@
 
                                 <div class="form-group col-sm-6">
                                     <label for="inputPass">Sua Senha </label>
-                                    <input type="text" class="form-control" id="inputPass" placeholder="Senha" required>
+                                    <input type="text" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
                               

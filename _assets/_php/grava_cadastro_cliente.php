@@ -16,8 +16,13 @@ $cep = $_POST["cep_cliente"];
 $endereço = $_POST["endereço_cliente"];
 $cidade = $_POST["cidade_cliente"];
 $estado = $_POST["estado_cliente"];
-$pref_email = $_POST["pref_email_cliente"];
-$pref_cel = $_POST["pref_cel_cliente"];
+$pref_contato_cel = $_POST["pref_contato_cel"];
+$pref_contato_email = $_POST["pref_contato_email"];
+//Para cada checkbox selecionado
+$resposta_checkbox = "$pref_contato_cel e $pref_contato_email";
+
+
+
 //$status = $_POST["status_cliente"];
 //$data = $_POST["data_cadastro_cliente"];
 //$img_cliente = $_POST["img_perfil_cliente"];
@@ -26,8 +31,8 @@ $pref_cel = $_POST["pref_cel_cliente"];
 
 // alunos é uma tabela no banco de dados
 $executa = "INSERT INTO perfil_cliente (nome_cliente, sobrenome_cliente, telefone_cliente, celular_cliente, 
-email_cliente, senha_cliente, endereço_cliente, cep_cliente, cidade_cliente, estado_cliente, pref_email_cliente, pref_cel_cliente) 
-VALUES ('$nome','$sobrenome', '$telefone', '$celular', '$email', '$senha', '$endereço', '$cep', '$cidade', '$estado', '$pref_email', '$pref_cel')";
+email_cliente, senha_cliente, endereço_cliente, cep_cliente, cidade_cliente, estado_cliente, pref_contato) 
+VALUES ('$nome','$sobrenome', '$telefone', '$celular', '$email', '$senha', '$endereço', '$cep', '$cidade', '$estado', '$resposta_checkbox')";
 
 
 $resultado_form = mysqli_query($conn, $executa);

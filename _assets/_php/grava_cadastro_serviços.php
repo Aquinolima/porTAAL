@@ -17,8 +17,10 @@ $cep = $_POST["cep_cliente_serviço"];
 $endereço = $_POST["endereço_cliente_serviço"];
 $cidade = $_POST["cidade_cliente_serviço"];
 $estado = $_POST["estado_cliente_serviço"];
-$pref_email = $_POST["pref_email_cliente_serviço"];
-$pref_cel = $_POST["pref_cel_cliente_serviço"];
+$pref_contato_cel = $_POST["pref_contato_cel"];
+$pref_contato_email = $_POST["pref_contato_email"];
+//Para cada checkbox selecionado
+$resposta_checkbox = "$pref_contato_cel e $pref_contato_email";
 //$status = $_POST["status_cliente_serviço"];
 //$data = $_POST["data_cadastro_cliente_serviço"];
 //$img_cliente = $_POST["img_perfil_cliente_serviço"];
@@ -29,8 +31,8 @@ $pref_cel = $_POST["pref_cel_cliente_serviço"];
 $executa = "INSERT INTO perfil_serviço (nome_cliente_serviço, sobrenome_cliente_serviço, profissão_cliente_serviço, 
 telefone_cliente_serviço, celular_cliente_serviço, email_cliente_serviço, senha_cliente_serviço, 
 endereço_cliente_serviço, cep_cliente_serviço, cidade_cliente_serviço, estado_cliente_serviço, 
-pref_email_cliente_serviço, pref_cel_cliente_serviço) VALUES ('$nome','$sobrenome', '$profissão', '$telefone', 
-'$celular', '$email', '$senha', '$endereço', '$cep', '$cidade', '$estado', '$pref_email', '$pref_cel')";
+pref_contato) VALUES ('$nome','$sobrenome', '$profissão', '$telefone', 
+'$celular', '$email', '$senha', '$endereço', '$cep', '$cidade', '$estado', '$resposta_checkbox')";
 
 
 $resultado_form = mysqli_query($conn, $executa);
