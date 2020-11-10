@@ -1,17 +1,16 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-Br">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="_assets/_style/_css/style.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/all.css">
     <script src="node_modules/font-awesome/js/all.js"></script>
-
-
 
     <title>porTAAL Arquitetura</title>
 </head>
@@ -25,6 +24,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSite">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
@@ -48,9 +48,10 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item my-3 mx-1">
-                            <a class="nav-link btn btn-lg" href="index.php" role="button">Voltar</a>
+                        <li class="nav-item mx-1 my-3">
+                            <a class="nav-link btn btn-lg" href="index.php" role="button">Sair</a>
                         </li>
+
                     </ul>
                 </div>
             </nav>
@@ -58,63 +59,34 @@
         </div>
     </header>
     <!-- End Header with Navbar -->
-    <main>
-        <div class="jumbotron jumbotron-fluid mb-0 py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center my-3">
-                        <h1 class="display-2"><i class="fas fa-user-astronaut display-3" style="color:#2E879B;"></i> Login <i class="fas fa-meteor display-3" style="color:#2E879B;"></i></h1>
-                        <p>Bem-vindo ao sistema porTAAL! <br><br> Digite seu e-mail e senha administrativa!</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-12">
-                        <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
 
-                            <div class="form-group col-sm-4 my-0 mx-auto">
-                                <label for="loginAdm" class="col-form-label">Login:</label>
-                                <input type="text" name="loginAdm" class="form-control" id="contact-name">
-                            </div>
-                            <div class="form-group col-sm-4 my-0 mx-auto">
-                                <label for="senhaAdm" class="col-form-label">Senha:</label>
-                                <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
-                            </div>
-                            <div class="form-group col-sm-4  my-3 mx-auto">
-                                <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Entrar</button>
-                            </div>
-                        </form>
-                        <div class="form-group col-sm-4  my-3 mx-auto">
-                            <a class="forget_pass" style="color: #9B2B39;" href="login_adm.php">Esqueci minha senha!</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="jumbotron jumbotron-fluid mb-0 py-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12 my-0 text-center">
 
 
-                <hr>
-                <div class="row my-3 justify-content-center">
-                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem;">
-                        <div class=" text-center">
-                            <h3><i class="fas fa-map-marker-alt mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
-                            <p>Guarulhos, SP 07121-240</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem; ">
-                        <div class=" text-center">
-                            <h3><i class="fas fa-phone mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
-                            <p>11 98571-8918 / 11 2468-8927</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12 justify-content-center" style="width: 18rem; ">
-                        <div class=" text-center">
-                            <h3><i class="fas fa-envelope mt-4 fa-2x" style="color: #9B2B39;"></i></h3>
-                            <p>taalarquitetura@gmail.com</p>
-                        </div>
-                    </div>
+
+                    <h2 class="display-4" style="color: #9B2B39;">Impossivel abrir a página.</h2>
+                    <br>
+                    <h3 >Faça o login para continuar.</h3>
+                    <br><br>
+
+
+                    </form>
+                    <input type="button" value="Login" name="Login" onclick="location.href='login.php'">
+                    <input type="button" value="Cancelar" name="cancelar" onclick="location.href='index.php'">
+
                 </div>
+
             </div>
+
         </div>
-    </main>
+
+    </div>
+    </div>
+
     <!-- Start Footer -->
     <footer>
         <div class="container mt-0">
@@ -139,6 +111,7 @@
                             <a class="list-link" href="contato.php">Contato</a>
                         </li>
                     </ul>
+
                 </div>
                 <div class="col-4 pt-2">
                     <ul class="list-group mb-3 justify-content-center">
@@ -150,16 +123,20 @@
                             <a class="list-link mx-2" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                         </li>
                     </ul>
+                    <a id="myAccount" href="login_adm.php">My account</a>
+
                 </div>
             </div>
         </div>
     </footer>
     <!-- End Footer  -->
 
+
     <!-- jQuery, Popper.js, and Bootstrap JS  -->
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
 </body>
 
 </html>

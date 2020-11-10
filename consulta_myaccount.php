@@ -1,6 +1,16 @@
 <?php
 // ligação entre o programa web e o banco de dados
 include "_assets/_php/abrir_banco.php";
+
+session_start();
+
+if (isset($_SESSION["codigo"])){
+	echo $_SESSION["codigo"];
+	echo $_SESSION["nome"];
+
+}else{
+	header('location:erro_de_login.php');
+};
 ?>
 
 <head>

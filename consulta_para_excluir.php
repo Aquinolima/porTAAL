@@ -115,7 +115,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                 <br>
                                 <input type="submit" value="Excluir" name="excluir">
 
-                                <input type="button" value="Cancelar" name="cancelar" onclick="location.href='consulta_myacount.php'">
+                                <input type="button" value="Cancelar" name="cancelar" onclick="location.href='consulta_myaccount.php'">
                             </form>
 
                         </div>
