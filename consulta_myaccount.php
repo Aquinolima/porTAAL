@@ -61,7 +61,7 @@ if (isset($_SESSION["codigo"])){
 					</ul>
 					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 						<li class="nav-item mx-1 my-3">
-							<a class="nav-link btn btn-lg" href="index.php" role="button">Sair</a>
+							<a class="nav-link btn btn-lg" href="_assets/_php/logout.php" role="button">Sair</a>
 						</li>
 
 					</ul>
