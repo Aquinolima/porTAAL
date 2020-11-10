@@ -84,7 +84,7 @@ $query = $conn->query($executa);
                  
                         <h2 class="display-4" style="color: #9B2B39;">Cadastro apagado com sucesso!</h2>
                         <br>
-                        <input type="button" value="Voltar" name="cancelar" onclick="location.href='../../consulta_myacount.php'"></p>
+                        <input type="button" value="Voltar" name="cancelar" onclick="location.href='../../consulta_myaccount.php'"></p>
                     
                 </div>
 
