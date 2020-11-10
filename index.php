@@ -82,11 +82,11 @@ session_start();
                     <div class="col-12">
                         <ul class="nav nav-pills justify-content-center my-3" id="pills-nav" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" id="nav-pills-02" data-toggle="pill" href="#nav-item-02"><i class="fas fa-address-card" style="color: #f8f9fa;"></i> Sobre
+                                <a class="nav-link active" id="nav-pills-02" data-toggle="pill" href="#nav-item-02"><i class="fas fa-address-card" style="color: #f8f9fa;"></i> Sobre
                                     Nós</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" id="nav-pills-01" data-toggle="pill" href="#nav-item-01"> <i class="fas fa-paint-roller" style="color: #f8f9fa;"></i> Serviços</a>
+                                <a class="nav-link" id="nav-pills-01" data-toggle="pill" href="#nav-item-01"> <i class="fas fa-paint-roller" style="color: #f8f9fa;"></i> Serviços</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="nav-pills-03" data-toggle="pill" href="#nav-item-03"><i class="fas fa-paper-plane" style="color: #f8f9fa;"></i> Contato</a>
@@ -97,7 +97,7 @@ session_start();
                         <div class="tab-content mt-5 px-5" id="nav-pills-content">
 
                             <!--Section: Serviços-->
-                            <div class="tab-pane fade show active " id="nav-item-01" role="tabpanel">
+                            <div class="tab-pane fade" id="nav-item-01" role="tabpanel">
                                 <div class="row">
                                     <div class="col-sm-3 col-xs-6 mt-4 text-center ">
                                         <p><i class="fas fa-search-dollar display-2" style="color: #2E879B;"></i></p>
@@ -136,7 +136,7 @@ session_start();
                         <!--Section: Serviços-->
                         <!--Section: Sobre Nós-->
 
-                        <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+                        <div class="tab-pane fade show active" id="nav-item-02" role="tabpanel">
                             <div class="row">
                                 <div class="col-sm-12 col-lg-6 my-2 text-center">
                                     <!-- Start Embed -->

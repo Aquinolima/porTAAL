@@ -73,8 +73,10 @@
                     <div class="col-12">
                         <ul class="nav nav-pills justify-content-center " id="pills-nav" role="tablist">
                             <li class="nav-item my-2">
-                                <a id="formCliente" href="login_cliente.php" class="nav-link text-center my-auto active" style="width: 10rem; height: 3rem;" >
-                                    <h4>Cliente</h4>
+                                <!--   <a id="formCliente" href="login_cliente.php" class="nav-link text-center my-auto active" style="width: 10rem; height: 3rem;">   -->
+                                <a id="formCliente" data-toggle="modal" data-target="#form-modal-login-cliente" class="nav-link text-center my-auto active" style="width: 10rem; height: 3rem;" id="nav-pills-01" data-toggle="pill" href="#nav-item-01">
+                                
+                                <h4>Cliente</h4>
                                 </a>
                             </li>
                             <li class="nav-item my-2">
