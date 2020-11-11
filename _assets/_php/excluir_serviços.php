@@ -12,12 +12,11 @@ if (isset($_SESSION["codigo"])) {
     header('location:erro_de_login.php');
 };
 
-
 // capturando os dados preenchidos pelo usuário e armazenando na memória (variáveis)
 $cod = $_POST["txtcodigo"];
 
 
-$executa = "DELETE FROM `contato_site` WHERE `codigo`=$cod";
+$executa = "DELETE FROM `perfil_serviço` WHERE `codigo`=$cod";
 
 $query = $conn->query($executa);
 

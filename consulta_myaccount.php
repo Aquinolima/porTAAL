@@ -76,7 +76,7 @@ if (isset($_SESSION["codigo"])) {
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                       
+
                     </div>
                 </div>
                 <!-- Start Navpills -->
@@ -189,7 +189,6 @@ if (isset($_SESSION["codigo"])) {
                                                                     <th scope="col">Celular</th>
                                                                     <th scope="col">Preferência</th>
                                                                     <th scope="col">Endereço</th>
-                                                                    <th scope="col">Data Cadastro</th>
                                                                     <th scope="col">Atividade</th>
                                                                 </tr>
                                                             </thead>
@@ -212,10 +211,10 @@ if (isset($_SESSION["codigo"])) {
                                                                 echo "<td>" . $dados->celular_cliente . "</td>";
                                                                 echo "<td>" . $dados->pref_contato . "</td>";
                                                                 echo "<td>" . $dados->endereço_cliente . $dados->cidade_cliente . $dados->estado_cliente . "</td>";
-                                                                echo "<td>" . $dados->data_cadastro_cliente . "</td>";
                                                                 echo "<td>" . $dados->status_cliente . "</td>";
 
-                                                                echo "<td>" . "<center><a href='consulta_para_excluir.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
+                                                                echo "<td>" . "<center><a href='consulta_para_alterar_cliente.php?codigo=$cod'> <h2><i class='fas fa-user-edit' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
+                                                                echo "<td>" . "<center><a href='consulta_para_excluir_cliente.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
                                                                 echo "</tbody>";
                                                             }
                                                             $query->free(); // libera a memória do servidor após cada consulta.
@@ -233,7 +232,7 @@ if (isset($_SESSION["codigo"])) {
                             </div>
                             <!--Section: Clientes-->
 
-                            <!--Section: Contato-->
+                            <!--Section: Serviços-->
                             <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
                                 <div class="row">
                                     <div class="jumbotron jumbotron-fluid mb-0 py-3">
@@ -259,7 +258,6 @@ if (isset($_SESSION["codigo"])) {
                                                                     <th scope="col">Celular</th>
                                                                     <th scope="col">Preferência</th>
                                                                     <th scope="col">Endereço</th>
-                                                                    <th scope="col">Data Cadastro</th>
                                                                     <th scope="col">Atividade</th>
                                                                 </tr>
                                                             </thead>
@@ -275,17 +273,17 @@ if (isset($_SESSION["codigo"])) {
                                                                 $cod =  $dados->codigo;
                                                                 echo "<tbody>";
                                                                 echo "<tr><th scope='row'>" . $cod . "</th>";
-                                                                echo "<td>" . $dados->nome_cliente_serviço . $dados->sobrenome_cliente_serviço ."</td>";
+                                                                echo "<td>" . $dados->nome_cliente_serviço . $dados->sobrenome_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->profissão_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->cpf_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->email_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->celular_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->pref_contato . "</td>";
                                                                 echo "<td>" . $dados->endereço_cliente_serviço . $dados->cidade_cliente_serviço . $dados->estado_cliente_serviço . "</td>";
-                                                                echo "<td>" . $dados->data_cadastro_cliente_serviço . "</td>";
                                                                 echo "<td>" . $dados->status_cliente_serviço . "</td>";
-
-                                                                echo "<td>" . "<center><a href='consulta_para_excluir.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
+                                                                
+                                                                echo "<td>" . "<center><a href='consulta_para_alterar_serviços.php?codigo=$cod'> <h2><i class='fas fa-user-edit' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
+                                                                echo "<td>" . "<center><a href='consulta_para_excluir_serviços.php?codigo=$cod'> <h2><i class='fas fa-trash-alt' style='color: #9B2B39;'></i></h2> </a></center>" . "</td>";
                                                                 echo "</tbody>";
                                                             }
                                                             $query->free(); // libera a memória do servidor após cada consulta.
@@ -304,7 +302,7 @@ if (isset($_SESSION["codigo"])) {
 
                                 </div>
                             </div>
-                            <!--Section: Contato-->
+                            <!--Section: Serviços-->
                         </div>
                     </div>
                 </div>

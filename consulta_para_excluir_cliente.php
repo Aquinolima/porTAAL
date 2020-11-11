@@ -15,18 +15,21 @@ if (isset($_SESSION["codigo"])) {
 
 $codigo = $_GET["codigo"];
 
-$executa2 = "SELECT * FROM contato_site WHERE codigo=$codigo";
+$executa2 = "SELECT * FROM perfil_cliente WHERE codigo=$codigo";
 
 $query = $conn->query($executa2);
 
 while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
 {
-    $nome = $dados->nome_contato;
-    $email = $dados->email_contato;
-    $telefone = $dados->telefone_contato;
-    $assunto = $dados->assunto_contato;
-    $mensagem = $dados->mensagem_contato;
-    $data = $dados->data_contato;
+    $nome = $dados->nome_cliente;
+    $sobrenome = $dados->sobrenome_cliente;
+    $email = $dados->email_cliente;
+    $celular = $dados->celular_cliente;
+    $endereço = $dados->endereço_cliente;
+    $cidade = $dados->cidade_cliente;
+    $estado = $dados->estado_cliente;
+    $status = $dados->status_cliente;
+    $data = $dados->data_cadastro_cliente;
 }
 $query->free(); // libera a memória do servidor após cada consulta.
 ?>
@@ -100,7 +103,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                 <div class="col-sm-12 my-0 text-center">
 
                     <!-- Aqui começa o formulário de incluir dados  -->
-                    <form method="POST" action="_assets/_php/excluir_contato.php">
+                    <form method="POST" action="_assets/_php/excluir_cliente.php">
 
                         <input type="hidden" name="txtcodigo" value="<?php echo $codigo ?>">
 
@@ -115,11 +118,11 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                 <input type="hidden" name="txtcodigo" value="<?php echo $codigo ?>">
 
                                 <p>
-                                   <strong>Nome:</strong><?php echo $nome ?><br>
+                                   <strong>Nome:</strong><?php echo $nome . $sobrenome ?> <br>
                                    <strong>Email:</strong><?php echo $email ?><br>
-                                   <strong>Telefone:</strong><?php echo $telefone ?><br>
-                                   <strong>Assunto:</strong><?php echo $assunto ?><br><br>
-                                   <strong>Mensagem:</strong><br> <?php echo $mensagem ?><br><br>
+                                   <strong>Celular:</strong><?php echo $celular ?><br>
+                                   <strong>Endereço:</strong><?php echo $endereço . $cidade . $estado ?><br><br>
+                                   <strong>Atividade:</strong><br> <?php echo $status ?><br><br>
                                    <strong>Data:</strong><?php echo $data ?>
                                 </p>
 

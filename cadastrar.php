@@ -253,7 +253,7 @@
 
                                 <div class="form-group col-sm-6">
                                     <label for="inputPass">Sua Senha </label>
-                                    <input type="text" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
+                                    <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
                               
@@ -383,7 +383,7 @@
 
                                 <div class="form-group col-sm-6">
                                     <label for="inputPass">Sua Senha </label>
-                                    <input type="text" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
+                                    <input type="password" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
                               

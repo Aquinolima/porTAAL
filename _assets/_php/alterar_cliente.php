@@ -2,7 +2,6 @@
 // ligação entre o programa web e o banco de dados
 include "abrir_banco.php";
 
-
 session_start();
 
 if (isset($_SESSION["codigo"])) {
@@ -13,11 +12,36 @@ if (isset($_SESSION["codigo"])) {
 };
 
 
+
 // capturando os dados preenchidos pelo usuário e armazenando na memória (variáveis)
 $cod = $_POST["txtcodigo"];
 
+$nome = $_POST["nome_cliente"];
+$sobrenome = $_POST["sobrenome_cliente"];
+$cpf = $_POST["cpf_cliente"];
+$rg = $_POST["rg_cliente"];
+$telefone = $_POST["telefone_cliente"];
+$celular = $_POST["celular_cliente"];
+$email = $_POST["email_cliente"];
+$senha = $_POST["senha_cliente"];
+$cep = $_POST["cep_cliente"];
+$endereço = $_POST["endereço_cliente"];
+$cidade = $_POST["cidade_cliente"];
+$estado = $_POST["estado_cliente"];
+$pref_contato = $_POST["pref_cliente"];
 
-$executa = "DELETE FROM `contato_site` WHERE `codigo`=$cod";
+
+$status = $_POST["radio_atividade"];
+
+//$data = $_POST["data_cadastro_cliente"];
+
+
+
+
+$executa = "UPDATE `perfil_cliente` SET `nome_cliente`='$nome', `sobrenome_cliente`='$sobrenome',
+ `cpf_cliente`='$cpf', `rg_cliente`='$rg', `email_cliente`='$email', `senha_cliente`='$senha', `telefone_cliente`='$telefone',
+  `celular_cliente`='$celular', `cep_cliente`='$cep', `endereço_cliente`='$endereço', `cidade_cliente`='$cidade', 
+  `estado_cliente`='$estado', `pref_contato`='$pref_contato',  `status_cliente`='$status' WHERE `codigo`='$cod'";
 
 $query = $conn->query($executa);
 
@@ -92,7 +116,7 @@ $query = $conn->query($executa);
                 <div class="col-sm-12 my-0 text-center">
 
                  
-                        <h2 class="display-4" style="color: #9B2B39;">Cadastro apagado com sucesso!</h2>
+                        <h2 class="display-4" style="color: #9B2B39;">Cadastro alterado com sucesso!</h2>
                         <br>
                         <input type="button" value="Voltar" name="cancelar" onclick="location.href='../../consulta_myaccount.php'"></p>
                     
