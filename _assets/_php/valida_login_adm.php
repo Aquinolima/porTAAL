@@ -26,13 +26,14 @@ $executa = "SELECT * FROM login_adm WHERE email_adm = '$login' and senha_adm = '
         $cod =  $dados->codigo;
         $nome = $dados->nome_adm;
         $email = $dados->email_adm;
-        $função = $dados->funçao_adm;
+        $funcao = $dados->funçao_adm;
         $ativo = $dados->status_adm;
 
         session_start();
         $_SESSION["codigo"] = $cod;
         $_SESSION["nome"] = $nome;
         $_SESSION["email"] = $email;
+        $_SESSION["funçao_adm"] = $funcao;
 
         
         if($ativo == 1){

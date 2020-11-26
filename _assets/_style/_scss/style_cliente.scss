@@ -1,0 +1,147 @@
+// Para rodar o sass deve-se iniciar o seguinte comando na pasta do arquivo:
+//     sass --watch node_modules/bootstrap/scss:node_modules/bootstrap/compiler node_modules/font-awesome/scss:node_modules/font-awesome/css _assets/_style/_scss:_assets/_style/_css
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+@function rem($value) {
+    @return unquote(($value/1px)/16+'rem');
+}
+
+$easeTime: 0.25s;
+$margin-top: 56px;
+$colors: ('mattBlackLight': '#f8f9fa',
+    'mattBlackDark': '#212121',
+    'mattGray': '#878d8d',
+    'mattRed': '#9B2B39',
+    'mattBlue': '#2E879B',
+    'mattBlueDark': '#287384',
+    'mattGrayLight': '#F9FAF5',
+    'mattOrange': '#FE7E01',
+   'mattGrayLigth2': '#f5f8fa'
+);
+
+@each $colorName,
+$colorValue in $colors {
+    .bg-#{$colorName} {
+        background-color: #{$colorValue};
+    }
+
+    .text-#{$colorName} {
+        color: #{$colorValue};
+    }
+}
+
+body {
+    @extend .bg-mattBlue;
+    @extend .bg-mattBlackDark;
+}
+
+.wrapper {
+    margin-top: 56px;
+
+    .sideMenu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: 74px auto auto;
+        width: 250px;
+        transition: all ease .25s;
+        transform: translateX(-100%);
+        z-index: 2000;
+        box-shadow: 0 15px 20px  black;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0px;
+        transition: all ease .25s;
+    }
+
+    &.active {
+        .sideMenu {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        .sideMenu {
+            transform: translateX(0);
+        }
+
+        .content {
+            margin-left: rem(250px);
+        }
+
+        &.active {
+            .sideMenu {
+                width: rem(100px);
+
+                .nav-link {
+                    text-align: center;
+
+                    .icon {
+                        margin-right: 0;
+                    }
+
+                    .text {
+                        display: none;
+                    }
+                }
+            }
+
+            .content {
+                margin-left: rem(80px);
+            }
+        }
+    }
+}
+
+
+.nav-link {
+    align-items: center;
+    display: block;
+    white-space: nowrap;
+
+    .icon {
+        margin-right: rem(4px);
+        font-size: rem(35px);
+        vertical-align: middle;
+        @extend .text-mattBlackDark;
+        height: rem(32px);
+        width: rem(32px);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        font-size: rem(15px);
+        @extend .text-mattBlackDark;
+    }
+
+    &:hover,
+    &.active {
+       
+        background-color: #f5f8fa;
+        border-left: 8px solid  #FE7E01;
+        
+
+        .icon {
+            margin-right: 6px;
+            margin-left: 12px;
+            font-size: 42px;
+            color: #9ec7d0;;
+            
+        }
+        .text {
+            font-weight: bold;
+            font-size: 18px;
+            @extend .text-mattBlackDark;
+        }
+    }
+}
