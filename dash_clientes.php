@@ -14,7 +14,7 @@ if (isset($_SESSION["codigo"])) {
 $nome = $_SESSION["nome"];
 $id = $_SESSION["codigo"];
 $email = $_SESSION["email"];
-$status = $_SESSION["funcao_adm"];
+
 $atividade = "Ativo";
 
 ?>
@@ -32,7 +32,7 @@ $atividade = "Ativo";
     <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
     <link rel="stylesheet" href="_assets/_style/_css/style_cliente.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/all.css">
-    <script src="node_modules/font-awesome/js/all.js"></script>
+
     <title>porTAAL Arquitetura - Clientes</title>
 </head>
 
@@ -110,7 +110,10 @@ $atividade = "Ativo";
                             <a class="dropdown-item" href="#">Buscar</a>
                             <a class="dropdown-item" href="#">Configurações</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Sair</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Sair
+                            </a>
                         </div>
                     </li>
                 </ul>
@@ -246,9 +249,13 @@ $atividade = "Ativo";
                         </div>
                     </div>
                 </div>
+
+
                 <div class="content">
                     <main>
                         <div class="container-fluid">
+                            <!-- 
+
                             <div class="row">
                                 <div class="col-md-4 my-3">
                                     <div class="bg-mattBlackLight px-3 py-3">
@@ -299,14 +306,263 @@ $atividade = "Ativo";
                                     </div>
                                 </div>
                             </div>
-                        </div>
+
+-->
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <input type="text" class="form-control" name="pesquisaNome" value="Nome">
+                                        <small id="emailHelp" class="form-text"  style="color:#ecede8;">Pesquise pelo nome do profissional ou pela profissão.</small>
+                                    </div>
+                                    <div class="col-md-2 mb-3 ">
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Profissão...</option>
+                                            <option>Todas</option>
+                                            <option>Arquiteto</option>
+                                            <option>Bombeiro Civil</option>
+                                            <option>Decorador</option>
+                                            <option>Designer</option>
+                                            <option>Engenheiro</option>
+                                            <option>Projetista</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 mb-3 mr-auto ">
+                                        <button type="submit" class="btn" style="background-color: #FE7E01; color:#ecede8;">Pesquisar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 my-3 mx-auto">
+                                    <div class="card  mb-5">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Título</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
+                                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
+                                        </div>
+
+                                        <div class="card-footer text-muted">
+                                            Texto de rodapé
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-4 my-3 mx-auto">
+                                    <div class="card  mb-5">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Título</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
+                                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
+                                        </div>
+
+                                        <div class="card-footer text-muted">
+                                            Texto de rodapé
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-4 my-3 mx-auto">
+                                    <div class="card  mb-5">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Título</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
+                                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
+                                        </div>
+
+                                        <div class="card-footer text-muted">
+                                            Texto de rodapé
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
                     </main>
                 </div>
+
+
+
             </div>
+
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha256-qE/6vdSYzQu9lgosKxhFplETvWvqAAlmAuR+yPh/0SI=" crossorigin="anonymous"></script>
             <script src="_assets/_js/script.js"></script>
+
+
+
+
+
+
+            <!-- Start Modal Logout -->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Clique em "Sair" para realizar o Logout.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Continuar</button>
+                            <a class="btn btn-info" href="_assets/_php/logout.php">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal Logout -->
+            <!-- Start Modal 1 -->
+            <div class="modal fade" id="siteModal1" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Título Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Texto descrição Modal.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                Lorem Ipsum.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                Lorem Ipsum.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                Lorem Ipsum.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                Lorem Ipsum.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal 1 -->
+            <!-- Start Modal 2 -->
+
+            <div class="modal fade" id="siteModal2" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Título Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4>Título</h4>
+                                        <h6>Subtítulo</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                            been
+                                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                            galley
+                                            of type and scrambled it to make a type specimen book. It has survived not only five
+                                            centuries,
+                                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                            and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                            Lorem Ipsum.</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="img-modal py-auto" src="_assets/_img/card6.jpg" alt="imagem-card">
+                                        <img class="img-modal py-auto" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer mx-auto">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#siteModal3">Entrar em
+                                contato</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Modal 2 -->
+            <!-- Start Modal 3 -->
+            <div class="modal fade" id="siteModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="col-form-label">Nome Completo:</label>
+                                    <input type="text" class="form-control" id="contact-name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Telefone:</label>
+                                    <input type="text" class="form-control" id="contact-phone">
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Mensagem:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-info">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal 3 -->
 
     </body>
 
