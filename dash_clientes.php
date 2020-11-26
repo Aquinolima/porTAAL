@@ -313,7 +313,7 @@ $atividade = "Ativo";
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <input type="text" class="form-control" name="pesquisaNome" value="Nome">
-                                        <small id="emailHelp" class="form-text"  style="color:#ecede8;">Pesquise pelo nome do profissional ou pela profissão.</small>
+                                        <small id="emailHelp" class="form-text" style="color:#ecede8;">Pesquise pelo nome do profissional ou pela profissão.</small>
                                     </div>
                                     <div class="col-md-2 mb-3 ">
                                         <select class="custom-select" id="validationCustom04" required>
@@ -332,6 +332,38 @@ $atividade = "Ativo";
                                     </div>
                                 </div>
                             </form>
+
+
+                            <div class="row" style="color:#ecede8;">
+                                <div class="col-sm-4 col-xs-6 mt-4 text-center ">
+                                    <p><i class="fas fa-drafting-compass display-3" style="color:#ecede8;"></i></p>
+                                    <p>Arquitetos</p>
+                                </div>
+                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
+                                <p><i class="fas fa-hard-hat display-3" style="color:#ecede8;"></i></p>
+                                    <p>Engenheiros</p>
+                                </div>
+                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
+                                <p><i class="fas fa-swatchbook display-3" style="color:#ecede8;"></i></p>
+                                    <p>Designers</p>
+                                </div>
+                                <div class="col-sm-4  col-xs-6 mt-4 text-center">
+                                    <p><i class="fas fa-ruler-combined display-3" style="color:#ecede8;"></i></p>
+                                    <p>Projetistas</p>
+                                </div>
+                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
+                                    <p><i class="fa fa-fire-extinguisher display-3" style="color:#ecede8;" aria-hidden="true"></i></p>
+                                    <p>Bombeiros Civis</p>
+                                </div>
+                                <div class="col-sm-4  col-xs-6 mt-4 text-center">
+                                    <p><i class="fas fa-chair display-3" style="color:#ecede8;"></i></p>
+                                    <p>Decoradores</p>
+                                </div>
+                            </div>
+
+
+
+
                             <div class="row">
                                 <div class="col-sm-6 col-md-4 my-3 mx-auto">
                                     <div class="card  mb-5">
