@@ -35,7 +35,7 @@ $atividade = "Ativo";
 
     <link rel="stylesheet" href="_assets/_style/_css/conf.css">
 
-    <title>porTAAL Arquitetura - Clientes</title>
+    <title>porTAAL Arquitetura - Profissionais</title>
 
 </head>
 
@@ -59,8 +59,8 @@ $atividade = "Ativo";
                             <span class="text"> Perfil</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="dash_clientes_busca.php">Buscar</a>
-                            <a class="dropdown-item" href="dash_clientes_editar.php">Configurações</a>
+                            <a class="dropdown-item" href="dash_clientes_serviços_perfilbusca.php">Seu Perfil</a>
+                            <a class="dropdown-item" href="dash_clientes_serviços_editar.php">Configurações</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -92,19 +92,19 @@ $atividade = "Ativo";
 
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="dash_clientes_busca.php" class="nav-link px-2">
+                                <a href="dash_clientes_serviços_perfil.php" class="nav-link px-2">
                                     <i class="material-icons icon">person</i>
-                                    <span class="text">Serviços</span>
+                                    <span class="text">Perfil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="dash_clientes_blog.php" class="nav-link px-2 active">
+                                <a href="dash_clientes_serviços_blog.php" class="nav-link px-2 active ">
                                     <i class="material-icons icon">dashboard</i>
                                     <span class="text">Blog</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="dash_clientes_editar.php" class="nav-link px-2">
+                                <a href="dash_clientes_serviços_editar.php" class="nav-link px-2">
                                     <i class="material-icons icon">settings</i>
                                     <span class="text">Configurações</span>
                                 </a>
@@ -133,7 +133,7 @@ $atividade = "Ativo";
                             <br>
 
                             <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> Último Serviço </b>
+                                <b> Profissão </b>
                                 <br>
                                 <?php
                                 echo $nome;
@@ -168,51 +168,51 @@ $atividade = "Ativo";
 
                                 <div class="col-sm-6 col-md-4 my-3 mx-auto">
                                     <div class="card  mb-5">
-                                        <img class="card-img-top p-auto" src="_assets/_img/card_arq.jpg" alt="imagem-card">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card_ideia.jpg" alt="imagem-card">
                                         <div class="card-body">
-                                            <h4 class="card-title">O que faz um arquiteto?</h4>
-                                            <h6 class="card-subtitle mb-2 text-muted"> As principais atribuições dessa profissão.</h6>
-                                            <p class="card-text">Saiba como é a carreira, quais as habilidades e como é o mercado de trabalho para um arquiteto.</p>
+                                            <h4 class="card-title">Como selecionar uma boa ideia de negócio.</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted"> Empreendedorismo </h6>
+                                            <p class="card-text">Conte com a ajuda do Sebrae para saber qual é o melhor tipo de empreendimento para você montar e ter sucesso.</p>
                                             <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b> Saiba Mais </b> </a>
-                                            <a href="https://www.decorfacil.com/o-que-faz-um-arquiteto/" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/como-selecionar-uma-boa-ideia-de-negocio,0d1a4e5778dad510VgnVCM1000004c00210aRCRD" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
                                         </div>
 
                                         <div class="card-footer text-muted">
-                                            por decorfacil - 17 de fevereiro de 2019
+                                            por Sebrae - Novembro de 2017
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-md-4 my-3 mx-auto">
                                     <div class="card  mb-5">
-                                        <img class="card-img-top p-auto" src="_assets/_img/card_des.jpg" alt="imagem-card">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card_pix.png" alt="imagem-card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Designer de interiores</h4>
-                                            <h6 class="card-subtitle mb-2 text-muted"> Saiba tudo sobre profissão mais procurada.</h6>
-                                            <p class="card-text">Cores, estética e ergonomia. Esses são alguns dos elementos que integram o cotidiano de um designer de interiores.</p>
+                                            <h4 class="card-title"> Entenda o que são pagamentos instantâneos – PIX</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">Finanças</h6>
+                                            <p class="card-text">A iniciativa PIX implementa um sistema de pagamentos instantâneos e promete revolucionar o mercado financeiro e facilitar para pagadores e recebedores.</p>
                                             <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b> </a>
-                                            <a href="https://www.decorfacil.com/designer-de-interiores/" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/artigos/entenda-o-que-sao-pagamentos-instantaneos-pix,6c506cab65ee3710VgnVCM1000004c00210aRCRD" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
                                         </div>
 
                                         <div class="card-footer text-muted">
-                                            por decorfacil - 30 de março de 2020
+                                            por Sebra - Setembro de 2020
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-md-4 my-3 mx-auto">
                                     <div class="card  mb-5">
-                                        <img class="card-img-top p-auto" src="_assets/_img/card_hab.jpg" alt="imagem-card">
+                                        <img class="card-img-top p-auto" src="_assets/_img/card_natal.png" alt="imagem-card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Habite-se: </h4>
-                                            <h6 class="card-subtitle mb-2 text-muted"> O que é e quanto custa tirar a certidão do seu imóvel.</h6>
-                                            <p class="card-text">Toda edificação, deve ter esse documento para comprovar a regularidade da construção.</p>
+                                            <h4 class="card-title">Então é Natal, o que fazer para vender mais?</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted"> Mercado de Vendas</h6>
+                                            <p class="card-text">Confira a nossa lista de Natal. São dicas imperdíveis para você incrementar a estratégia de venda do seu negócio para o fim do ano!</p>
                                             <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal3"> <b> Saiba Mais </b> </a>
-                                            <a href="https://www.decorfacil.com/habite-se/" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
+                                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/artigos/entao-e-natal-o-que-fazer-para-vender-mais,4119985409a75710VgnVCM1000004c00210aRCRD" class="card-link" style="color: #287384;"> <b> Acessar Site </b></a>
                                         </div>
 
                                         <div class="card-footer text-muted">
-                                        por redação - 20 de novembro de 2020
+                                            por Sebrae - Outubro de 2020
                                         </div>
                                     </div>
                                 </div>
@@ -262,39 +262,21 @@ $atividade = "Ativo";
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">O que faz um arquiteto?</h5>
+                            <h5 class="modal-title">Como selecionar uma boa ideia de negócio</h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>O arquiteto é o responsável pela criação de projetos para edifícios, casas,
-                                estabelecimentos comerciais, entre outros. O objetivo do seu trabalho é planejar
-                                e organizar áreas internas e externas dos mais variados ambientes.</p>
-                            <p>O projeto desenvolvido pelo arquiteto deve obedecer a uma arquitetura funcional que proporcione
-                                conforto, seja esteticamente bonito, mas sem precisar agredir o meio ambiente.
-                                O maior trunfo de um arquiteto é proporcionar harmonia entre iluminação, móveis e ventilação.</p>
-                            <p>Em uma construção, o arquiteto precisa se comunicar com as partes responsáveis para definirem
-                                um projeto que atenda às necessidades do cliente. Dessa forma, o profissional consegue escolher
-                                e especificar os melhores materiais que serão utilizados na construção.</p>
+                            <p>Iniciar um empreendimento é uma tarefa que exige a tomada de uma série de escolhas e decisões, e isso exige conhecimento do futuro empreendedor.</p>
+                            <p>Por isso, o Sebrae disponibiliza ao seu cliente mais de 450 ideias de negócios com orientações de “como montar”. Este produto mostra o que você precisa saber antes de iniciar em empreendimento: espaço físico adequado, número de empregados, equipamentos principais, valor do investimento, quais custos o negócio tem, a legislação que deve atender, entre outros.</p>
+                            <p>É importante lembrar que o Ideias de Negócios não substitui a elaboração de um Plano de Negócios. Ele dá uma visão geral sobre os aspectos de abertura destas empresas, entretanto é necessário se adequar a cada realidade.</p>
+                            <p>Para o futuro empreendedor que é aposentado, o Sebrae realizou uma pesquisa em 2017 que apontou que a maioria dos entrevistados pretende abrir um negócio no setor do comércio (59,6%), enquanto 30,1% pretendem abrir um negócio no setor de serviços.</p>
+                            O ramo da alimentação foi citado por mais de 24% dos entrevistados quando perguntados a que tipo de atividade se dedicaria sua futura empresa. Veja “como abrir”:
                             <hr>
-                            <h6> Quais são as atribuições de um arquiteto? </h6>
-                            <p>Segundo o Conselho de Arquitetura e Urbanismo do Brasil ― CAU o arquiteto possui um perfil
-                                generalista, mas algumas atribuições são determinantes para a função. Confira quais são..</p>
-                            <ul>
-                                <li>O arquiteto deve supervisionar, coordenar, fazer a gestão e orientação técnica de uma obra;</li>
-                                <li>Deve fazer a coleta de dados, estudo, planejamento, projeto e especificação;</li>
-                                <li>O estudo de viabilidade técnica e ambiental também deve ser executado pelo arquiteto;</li>
-                                <li>O arquiteto deve prestar assistência técnica, assessoria e consultoria;</li>
-                                <li>Deve ser o responsável pela direção de obras e de serviço técnico;</li>
-                                <li>Precisa fazer vistoria, perícia, avaliação, monitoramento, laudo, parecer técnico, auditoria e arbitragem;</li>
-                                <li>O arquiteto pode desempenhar o cargo e função técnica;</li>
-                                <li>Deve fazer treinamento, ensino, pesquisa e extensão universitária;</li>
-                                <li>O profissional é o responsável pelo desenvolvimento, análise, experimentação, ensaio, padronização, mensuração e controle de qualidade;</li>
-                                <li>Precisa elaborar orçamento;</li>
-                                <li>Precisa fazer a produção e divulgação técnica especializada;</li>
-                                <li>O arquiteto deve ser o responsável pela execução, fiscalização e condução de obra, instalação e serviço técnico.</li>
-                            </ul>
+                            <h6> Quer descobrir outras ideias de negócio? </h6>
+                            <p>Conte com a ajuda do Sebrae para saber qual é o melhor tipo de empreendimento para você montar e ter sucesso.</p>
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
@@ -308,51 +290,24 @@ $atividade = "Ativo";
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">O que faz um designer de interiores? </h5>
+                            <h5 class="modal-title">Entenda o que são pagamentos instantâneos – PIX </h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>O designer de interiores tem a missão de estabelecer uma relação harmônica entre o espaço e
-                                as pessoas, criando muito mais do que ambientes bonitos, mas também confortáveis, funcionais
-                                e que valorizam o estilo de vida dos moradores, seus desejos e as sensações que eles esperam
-                                ter dentro de casa.</p>
-                            <p>De modo geral, o trabalho de um designer de interiores se baseia em dois pontos chaves:
-                                planejamento e execução, como dito anteriormente. Contudo, apesar de parecer algo simples
-                                esse trabalho é bem mais complexo na prática.</p>
-                            <p>Isso porque ele envolve uma série de especificidades que precisam ser seguidas a risca para
-                                garantir um projeto de qualidade e excelência. Confira abaixo as etapas que o designer de
-                                interiores deve seguir, desde o inicio do projeto até o momento de entregá-lo ao cliente:</p>
+                            <p>O Banco Central do Brasil vem trabalhando em um projeto que promete revolucionar o sistema de pagamentos brasileiros, permitindo com que pagadores e recebedores façam transação de transferência de recursos de instantânea e segura.</p>
                             <hr>
-                            <h6> 1. Briefing </h6>
-                            <p>A primeira coisa que um designer de interiores deve fazer é ouvir o cliente e suas necessidades.
-                                Sabe aquela pessoa que coleciona fotos e pins da internet, mas não sabe como ordenar isso?
-                                Então essa será sua função. Reunir todas as ideias, expectativas e transformá-las em
-                                realidade na casa – ou outro local – do cliente.</p>
-                            <p>No briefing, o designer também deve se atentar para quanto o cliente pode e espera desembolsar com o projeto.</p>
-                            <h6>2. Projeto inicial</h6>
-                            <p>No projeto inicial o designer de interiores faz o levantamento de todo o ambiente. Tira as medidas, avalia o que já
-                                existe no espaço, como o tipo de piso, portas e janelas. Nessa etapa também é importante registrar o ambiente com
-                                fotos para auxiliar na definição do projeto principal.</p>
-                            <p>E aqui também que é realizado o primeiro desenho do projeto, conhecida como planta baixa. Esse esboço inicial traz
-                                as principais ideias do projeto.</p>
-                            <h6>3. Anteprojeto</h6>
-                            <p>O anteprojeto é uma evolução do projeto inicial. Nessa fase o designer de interiores já recebeu um ok do
-                                cliente e pode partir para a fase mais elaborada do projeto que é a versão em 3D. Atualmente existem diversos
-                                softwares que realizam esse trabalho.</p>
-                            <p>O projeto em 3D faz uma simulação muito realista de como o projeto irá ficar depois de pronto.</p>
-                            <h6>4. Projeto executivo</h6>
-                            <p>O projeto executivo é a continuidade do anteprojeto e nele constam informações importantes para que marceneiros,
-                                eletricistas e pintores possam dar continuidade ao que foi elaborado até o momento. Nessa etapa, o cliente
-                                já aprovou a versão em 3D e o projeto pode finalmente começar a sair do papel.</p>
-                            <p>Na parte executiva do projeto é importante que o designer tenha em mãos todos os custos com a obra, de
-                                modo que o cliente não seja surpreendido com orçamentos fora da sua realidade. </p>
-                            <h6>5. Acompanhamento e gerenciamento</h6>
-                            <p>A última etapa do trabalho de um designer de interiores é o acompanhamento e gerenciamento do projeto
-                                já em fase de execução. Nessa fase, o profissional se responsabiliza para que tudo saia de acordo com
-                                o que foi combinado com o cliente. Também é tarefa do designer de interiores garantir o prazo de entrega
-                                dos serviços e produtos contratados e a qualidade dos mesmos.</p>
+                            <p>Segundo o Banco Central:</p>
+                            <p>“Pagamentos instantâneos são as transferências monetárias eletrônicas na qual a transmissão da ordem de pagamento e a disponibilidade de fundos para o usuário recebedor ocorre em tempo real e cujo serviço está disponível durante 24 horas por dia, sete dias por semana e em todos os dias no ano. As transferências ocorrem diretamente da conta do usuário pagador para a conta do usuário recebedor, sem a necessidade de intermediários, o que propicia custos de transação menores. </p>
+                            <p>No Brasil, esse sistema se chamará PIX, e estará disponível para a população brasileira a partir de novembro de 2020. Além de aumentar a velocidade em que pagamentos ou transferências são feitos e recebidos, tem o potencial de alavancar a competitividade e a eficiência do mercado; baixar o custo, aumentar a segurança e aprimorar a experiência dos clientes; promover a inclusão financeira e preencher uma série de lacunas existentes na cesta de instrumentos de pagamentos disponíveis atualmente à população. Em linha com a revolução tecnológica em curso, possibilita a inovação e o surgimento de novos modelos de negócio e a redução do custo social relacionada ao uso de instrumentos baseados em papel.”</p>
+                            <hr>
+                            <p>Na prática, será um serviço de pagamento rápido, barato e seguro. O usuário poderá efetuar um pagamento com uso de lista de contatos no celular ou QR Code</p>
+                            <p>O PIX causará impacto para os pequenos negócios (Recebedores), porque o custo de adesão será menor que dos demais meios eletrônicos. Haverá disponibilização imediata dos recursos, o que tende a reduzir necessidade de crédito, facilidade de automatização e de conciliação de pagamentos, facilidade e rapidez de checkout.</p>
+                            <p>Também trará benefícios para os clientes dos pequenos negócios (Pagadores), porque é mais rápido, barato, mais prático (uso da lista de contatos de celular ou de QR Code para iniciar pagamentos), mais simples (só precisa de dispositivo digital para realizar o pagamento, dispensa uso de cartão, folha de cheque, cédulas, maquininhas) e possibilidade de integração com outros serviços no smartphone.</p>
+                            <p><img src="_assets/_img/card_pix2.png" alt="pagamento"></p>
+                            <p>O PIX causará impacto no ecossistema financeiro no Brasil, uma vez que permitirá a redução do uso de cédulas, irá gerar serviços com maior qualidade e menos custo, resultará um maior potencial de inclusão financeira em um ambiente totalmente seguro.</p>
+                            <p>O Sistema é totalmente regulamentado pelo Banco Central, com total transparência e participação da sociedade no seu processo construtivo. Todas as normas que regulamentam o PIX podem ser acessadas na página do Banco Central na internet. Sua última publicação sobre regulamentação, ocorreu no dia 16 de junho de 2020, por meio da CIRCULAR Nº 4.027, que trata sobre o Regulamento do Sistema de Pagamentos Instantâneos (SPI) e da Conta Pagamentos Instantâneos (Conta PI).</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
@@ -366,30 +321,23 @@ $atividade = "Ativo";
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">O que é o habite-se? </h5>
+                            <h5 class="modal-title">Então é Natal, o que fazer para vender mais?</h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>O habite-se é uma espécie de certidão emitida pelas prefeituras municipais. Esse documento serve para atestar que o imóvel está apto e em condições de ser habitado com segurança pelos moradores.</p>
-                            <p>O habite-se comprova também que o imóvel seguiu todas as exigências legais para ser construído e que está de acordo com o projeto inicial da obra.</p>
-                           <hr>
-                            <h6> Como tirar o habite-se? </h6>
-                            <p>O habite-se deve ser solicitado pelo proprietário do imóvel ou pela construtora responsável pela obra.</p>
-                            <p>Essa solicitação precisa ser realizada junto a prefeitura municipal. Em algumas cidades, no entanto, o habite-se deve ser requerido com a subprefeitura, secretaria de habitação, secretaria de planejamento urbano, departamento de engenharia, entre outros nomes. Informe-se antes para se certificar do local exato onde o documento é emitido na sua cidade.</p>
-                            <p>O habite-se também pode variar de nome dependendo do município. É comum encontrar o documento com variações do tipo Auto de Conclusão, Certificado de Conclusão de Obra, Alvará de Utilização, Carta de Habitação, entre outros.</p>
-                            <h6>Quanto tempo demora para o habite-se ser emitido?</h6>
-                            <p>Assim como o valor, o tempo de emissão do habite-se varia muito de caso para caso, bem como de prefeitura para prefeitura.</p>
-                            <p>Tudo vai depender se a documentação apresentada está em ordem e como a prefeitura ou órgão municipal responsável trabalha.</p>
-                            <p>Para obter respostas mais precisas, o ideal é buscar por informações diretamente com a prefeitura de onde o imóvel será registrado.</p>
-                            <h6>Como saber se um imóvel possui habite-se?</h6>
-                            <p>Antes de comprar ou alugar um imóvel é importante certificar-se de que o mesmo possui toda a documentação exigida por lei, incluindo o habite-se. Mas como conseguir essas informações?</p>
-                            <p>O modo mais prático, rápido e seguro de verificar se um imóvel possui habite-se é dirigindo-se até a prefeitura municipal. Lá é possível consultar toda a situação do imóvel, desde débitos com IPTU até multas, restrições e toda documentação.</p>
-                            <p>Também é possível obter essas informações junto ao cartório de registros de imóveis da cidade.</p>
-                            <p>Lembrando que uma casa pode ser comprada mesmo sem o habite-se, contudo, é importante que o futuro proprietário tenha em mente todas as implicações legais que a falta dessa documentação pode causar no futuro.</p>
-                        
-                        </div>
+                            <p>Como andam as ações da sua empresa para as vendas deste fim de ano? Você ainda não se mexeu e quer ajuda para começar ou a execução do planejamento já está a todo vapor e quer ver o que ainda pode melhorar?</p>
+                            <p>O natal é um dos eventos mais lucrativos do ano, uma celebração global que sempre trouxe grandes resultados de vendas para a maioria das empresas. A data, que acalenta o coração de muita gente, é a mais esperada do ano pelo comércio, pois as pessoas estão mais dispostas a gastar com presentes e lembrancinhas para os entes queridos. Mesmo com a situação financeira de diversas famílias abalada neste ano devido à pandemia do Coronavírus, estima-se que será ainda a data sazonal com mais venda no ano.</p>
+                            <p>2020 colocou em evidência um forte modelo de negócio, que já existia há tempos, mas foi repensado e intensificado por várias empresas: a venda digital. Quantas empresas que não faziam parte do digital e agora estão colhendo ótimos resultados desse canal?</p>
+                            <p>Os consumidores digitais vieram com tudo também. Mesmo quem tinha receio de comprar online, viu como uma alternativa para continuar o consumo. Podemos dizer que 2020 foi o ANO DO COMÉRCIO ONLINE.</p>
+                            <p>Assim, é importante, mesmo com a Retomada das Atividades em seu estado/município, manter a atenção nas vendas por redes sociais, vendas por WhatsApp e Loja Online – se existir.</p>
+                            <p><img src="_assets/_img/card_pac.png" alt="imgpac"></p>
+                            <p>Nós preparamos uma lista de Natal para presentear você. Mas não se preocupe, tudo o que queremos é dar dicas para sua estratégia de vendas. É mais do que hora de arregaçar as mangas e começar a trabalhar.</p>
+                            <hr>
+                            <p>Clique no link abaixo para ver a lista completa.</p>    
+                            <a href="https://www.sebrae.com.br/sites/PortalSebrae/artigos/entao-e-natal-o-que-fazer-para-vender-mais,4119985409a75710VgnVCM1000004c00210aRCRD" class="card-link" style="color: #287384;"> <b> Ver Lista </b></a>
+                     </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                         </div>

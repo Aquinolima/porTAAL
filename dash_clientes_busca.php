@@ -174,21 +174,8 @@ $atividade = "Ativo";
 
                         <hr>
 
-                        <form name="cliente_pesquisa_serviços" action="_assets/_php/valida_pesquisa_cliente.php" method="POST">
-                            <div class="row ">
-
-                                <div class="col-12 col-sm-6 ml-auto mt-3">
-                                    <input type="text" id="name" name="name" value="Nome" class="form-control" maxlength="50" size="50" required>
-                                </div>
-                                <div class="col-6 col-sm-2 mt-3 mr-auto ">
-                                    <button type="submit" class="btn" style="background-color: #FE7E01; color:#ecede8;">Pesquisar</button>
-                                </div>
-                            </div>
-                        </form>
-
-
                         <div class="col-10 ml-auto mt-1 mb-5 ">
-                            <small class="mb-5" style="color: #ecede8;"> <b>Pesquise pelo Nome ou pela função!</b></small>
+                            <p class="mb-5" style="color: #ecede8;"> <b>Escolha o serviço desejado!</b></p>
                         </div>
 
 

@@ -184,11 +184,11 @@ $atividade = "Ativo";
 
                             <form name="cliente_pesquisa_serviços" action="_assets/_php/valida_pesquisa_cliente.php" method="POST">
 
-                                <div class="row ">
-                                    <div class="col-6 ml-1 mt-3">
+                                <div class="row my-3">
+                                    <div class="col-sm-4 col-md-4  mt-3 ml-auto">
                                         <input type="text" id="name" name="name" value="Pesquise pelo Nome..." class="form-control" maxlength="50" size="50" required>
                                     </div>
-                                    <div class="col-2 mt-3 mr-auto ">
+                                    <div class="col-sm-2 col-md-2 mt-3 mr-auto">
                                         <button type="submit" class="btn" style="background-color: #FE7E01; color:#ecede8;">Pesquisar</button>
                                     </div>
                                 </div>
@@ -200,56 +200,19 @@ $atividade = "Ativo";
                                     <div class="card  mb-5">
                                         <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Título</h4>
-                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
+                                            <h4 class="card-title">Nome:</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">Profissão:</h6>
                                             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
-                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
                                         </div>
 
                                         <div class="card-footer text-muted">
-                                            Texto de rodapé
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4 my-3 mx-auto">
-                                    <div class="card  mb-5">
-                                        <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Título</h4>
-                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
-                                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
+                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b> Portfólio </b> </a>
                                             <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
-                                        </div>
 
-                                        <div class="card-footer text-muted">
-                                            Texto de rodapé
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-sm-6 col-md-4 my-3 mx-auto">
-                                    <div class="card  mb-5">
-                                        <img class="card-img-top p-auto" src="_assets/_img/card2.jpg" alt="imagem-card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Título</h4>
-                                            <h6 class="card-subtitle mb-2 text-muted">Subtítulo</h6>
-                                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal1"> <b>Acessar</b> </a>
-                                            <a href="#" class="card-link" style="color: #287384;" data-toggle="modal" data-target="#siteModal2"> <b> Saiba Mais </b></a>
-                                        </div>
-
-                                        <div class="card-footer text-muted">
-                                            Texto de rodapé
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
 
@@ -302,52 +265,57 @@ $atividade = "Ativo";
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Título Modal</h5>
+                            <h5 class="modal-title">Portfólio do Profissional</h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Texto descrição Modal.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                Lorem Ipsum.</p>
+                            <div class="container-fluid">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="_assets/_img/card1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="_assets/_img/card2.jpg" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="_assets/_img/card3.jpg" alt="Third slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="_assets/_img/card4.jpg" alt="Forth slide">
+                                        </div>
+
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        <div class="modal-footer mx-auto">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#siteModal3">Entrar em
+                                contato</button>
                         </div>
                     </div>
                 </div>
@@ -359,31 +327,51 @@ $atividade = "Ativo";
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Título Modal</h5>
+                            <h5 class="modal-title">Perfil do Profissional</h5>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="container-fluid">
+
                                 <div class="row">
-                                    <div class="col-6">
-                                        <h4>Título</h4>
-                                        <h6>Subtítulo</h6>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                            been
-                                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                            galley
-                                            of type and scrambled it to make a type specimen book. It has survived not only five
-                                            centuries,
-                                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                            and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                            Lorem Ipsum.</p>
+                                    <div class="col-12 text-center">
+
+                                        <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
                                     </div>
-                                    <div class="col-6">
-                                        <img class="img-modal py-auto" src="_assets/_img/card6.jpg" alt="imagem-card">
-                                        <img class="img-modal py-auto" src="_assets/_img/card5.jpg" alt="imagem-card">
+
+                                    <div class="col-12">
+                                        <h4>Nome: <?php
+                                                    echo $nome;
+                                                    ?></h4>
+                                        <h6>Profissão: <?php
+                                                        echo $nome;
+                                                        ?></h6>
+                                        <p>Sou um arquiteto e urbanista formado pela Universidade Guarulhos.
+                                            Minha experiência inclui o desenho e gerenciamento de projetos, análise e interpretação de dados e o desenvolvimento e implementação
+                                            de processos construtivos.
+                                            Gosto de gerar novas ideias e desenvolver soluções viáveis para problemas amplamente relevantes.
+                                            Meus colegas me descreveriam como uma pessoa motivada e engenhosa, que mantém uma atitude positiva e
+                                            proativa diante das adversidades.
+                                            Atualmente, estou buscando oportunidades que me permitam desenvolver e promover idéias projetos únicos e modernos.
+                                            Os campos de especialidade incluem projetos em geral e maquetes 3D.</p>
+                                    </div>
+                                    <div class="col-4 text-center my-2">
+                                        <div class="row">
+                                            <div class="col-1 mt-2">
+                                                <a href="https://facebook.com"><img src="_assets/_icons/_social/001-facebook.png" alt="logo Facebook" width="25px"></a>
+                                            </div>
+                                            <div class="col-1 pt-2">
+                                                <a href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
+                                            </div>
+                                            <div class="col-1 pt-2">
+                                                <a href="https://twitter.com"><img src="_assets/_icons/_social/002-twitter.png" alt="logo Twitter" width="25px"></a>
+                                            </div>
+                                            <div class="col-1 pt-2">
+                                                <a href="https://www.linkedin.com/"><img src="_assets/_icons/_social/010-linkedin.png" alt="logo Twitter" width="25px"></a>
+                                            </div>
+                                        </div>
                                     </div>
 
 
