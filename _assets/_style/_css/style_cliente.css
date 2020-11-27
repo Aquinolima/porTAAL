@@ -139,7 +139,7 @@
 }
 .nav-link:hover, .nav-link.active {
   background-color: #f5f8fa;
-  border-left: 8px solid;
+  border-left: 8px solid #FE7E01;
 }
 .nav-link:hover .icon, .nav-link.active .icon {
   margin-right: 6px;
