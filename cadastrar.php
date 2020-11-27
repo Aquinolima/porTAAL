@@ -245,7 +245,7 @@
                                             novidades por e-mail!
                                         </label>
                                         <label class="form-check-label">
-                                            <input type="checkbox" name="pref_contato_cel"  value="celular" class="form-check-input" id="inputCheckCel"> Desejo receber
+                                            <input type="checkbox" name="pref_contato_cel" value="celular" class="form-check-input" id="inputCheckCel"> Desejo receber
                                             novidades por whatsApp!
                                         </label>
                                     </div>
@@ -256,7 +256,7 @@
                                     <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
-                              
+
                                 <div class="modal-footer ">
                                     <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
                                     <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>
@@ -272,7 +272,7 @@
 
     <!-- End Modal -->
 
-    
+
     <!-- Start Modal Cadastro Serviços -->
     <div class="modal fade" id="form-modal-cadastro-serviços" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -311,11 +311,19 @@
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputProf">Sua Profissão</label>
-                                    <input type="text" name="profissão_cliente_serviço" class="form-control" id="inputProf" placeholder="Profissão" required>
+                                    <select name="profissão_cliente_serviço" id="inputProf" class="form-control" required>
+                                        <option value="..." selected>Escolha ...</option>
+                                        <option value="AC">Arquiteto</option>
+                                        <option value="AL">Decorador</option>
+                                        <option value="AP">Designer</option>
+                                        <option value="AM">Engenheiro</option>
+                                        <option value="BA">Projetista</option>
+                                        <option value="CE">Outros</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCep">Seu CEP</label>
-                                    <input type="text" name="cep_cliente_serviço" class="form-control"  id="inputCep" placeholder="Cep" required>
+                                    <input type="text" name="cep_cliente_serviço" class="form-control" id="inputCep" placeholder="Cep" required>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="inputCidade">Sua Cidade</label>
@@ -386,7 +394,7 @@
                                     <input type="password" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
-                              
+
                                 <div class="modal-footer ">
                                     <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
                                     <button type="submit" class="btn btn-md " style="background-color: #2E879B; color: #f8f9fa;" style="background-color: #9B2B39;">Enviar</button>

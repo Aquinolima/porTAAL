@@ -33,52 +33,12 @@ $atividade = "Ativo";
     <link rel="stylesheet" href="_assets/_style/_css/style_cliente.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/all.css">
 
+    <link rel="stylesheet" href="_assets/_style/_css/conf.css">
+
     <title>porTAAL Arquitetura - Clientes</title>
 </head>
 
 <body>
-    <!-- 
-       <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-                <a class="navbar-brand h1 mb-0" href="index.php"><img src="_assets/_icons/logo_portaal.png" alt="logo porTAAL"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSite">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home <span class="sr-only">(página
-                                    atual)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">Sobre Nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contato.php">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://facebook.com"><img src="_assets/_icons/_social/001-facebook.png" alt="logo Facebook" width="25px"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://twitter.com"><img src="_assets/_icons/_social/002-twitter.png" alt="logo Twitter" width="25px"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item mx-1 my-3">
-                            <a class="nav-link btn btn-lg" href="_assets/_php/logout.php" role="button">Sair</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <hr class="navbar navbar-expand-lg navbar-light bg-light container">
-        </div>
-    </header>    
-    -->
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-mattBlackLight fixed-top" style="background-color: #287384;">
@@ -107,8 +67,8 @@ $atividade = "Ativo";
                             <span class="text"> Perfil</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Buscar</a>
-                            <a class="dropdown-item" href="#">Configurações</a>
+                            <a class="dropdown-item" href="dash_clientes_busca.php">Buscar</a>
+                            <a class="dropdown-item" href="dash_clientes_editar.php">Configurações</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -142,111 +102,69 @@ $atividade = "Ativo";
 
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon">
-                                        person
-                                    </i>
-                                    <span class="text">Perfil</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon">
-                                        dashboard
-                                    </i>
-                                    <span class="text">Serviços</span>
-                                </a>
-                            </li>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="dash_clientes_busca.php" class="nav-link px-2 active">
+                                            <i class="material-icons icon">person</i>
+                                            <span class="text">Serviços</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="dash_clientes_blog.php" class="nav-link px-2">
+                                            <i class="material-icons icon">dashboard</i>
+                                            <span class="text">Blog</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="dash_clientes_editar.php" class="nav-link px-2">
+                                            <i class="material-icons icon">settings</i>
+                                            <span class="text">Configurações</span>
+                                        </a>
+                                    </li>
+                                </ul>
 
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon">
-                                        settings
-                                    </i>
-                                    <span class="text">Configurações</span>
-                                </a>
-                            </li>
+                                <div class="mt-5">
 
-                            <!--
-                            <li class="nav-item">
-                                <a href="#" class="nav-link  sideMenuToggler px-2">
-                                    <i class="material-icons icon expandView ">
-                                        code
-                                    </i>
+                                    <div class="text px-3" style="color: #212121;  font-size: 14px;">
+                                        <b> STATUS </b>
+                                        <br>
+                                        <?php
+                                        echo $atividade;
+                                        ?>
+                                    </div>
 
-                                    <span class="text">Esconder</span>
-                                </a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon"> insert_chart </i><span class="text">Charts</span></a>
-                            </li>
+                                    <br>
 
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon">
-                                        pages
-                                    </i>
-                                    <span class="text">Pages</span>
-                                </a>
-                            </li>
+                                    <div class="text px-3" style="color: #212121;  font-size: 14px;">
+                                        <b> ID </b>
+                                        <br>
+                                        <?php
+                                        echo $id;
+                                        ?>
+                                    </div>
 
-                            <li class="nav-item">
-                                <a href="#" class="nav-link px-2">
-                                    <i class="material-icons icon">
-                                        computer
-                                    </i>
-                                    <span class="text">Demo</span>
-                                </a>
-                            </li>
-                            
-                            -->
+                                    <br>
 
-                        </ul>
+                                    <div class="text px-3" style="color: #212121;  font-size: 14px;">
+                                        <b> Último Serviço </b>
+                                        <br>
+                                        <?php
+                                        echo $nome;
+                                        ?>
+                                    </div>
 
-                        <div class="mt-5">
+                                    <br>
 
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> STATUS </b>
-                                <br>
-                                <?php
-                                echo $atividade;
-                                ?>
-                            </div>
-
-                            <br>
-
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> ID </b>
-                                <br>
-                                <?php
-                                echo $id;
-                                ?>
-                            </div>
-
-                            <br>
-
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> Último Serviço </b>
-                                <br>
-                                <?php
-                                echo $nome;
-                                ?>
-                            </div>
-
-                            <br>
-
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> Localização </b>
-                                <br>
-                                <?php
-                                echo $nome;
-                                ?>
-                            </div>
+                                    <div class="text px-3" style="color: #212121;  font-size: 14px;">
+                                        <b> Localização </b>
+                                        <br>
+                                        <?php
+                                        echo $nome;
+                                        ?>
+                                    </div>
 
 
-                        </div>
+                                </div>
                     </div>
                 </div>
 
@@ -254,116 +172,29 @@ $atividade = "Ativo";
                 <div class="content">
                     <main>
                         <div class="container-fluid">
-                            <!-- 
+
 
                             <div class="row">
-                                <div class="col-md-4 my-3">
-                                    <div class="bg-mattBlackLight px-3 py-3">
-                                        <h4 class="mb-2">New Clients</h4>
-                                        <div class="progress" style="height: 16px;">
-                                            <div class="progress-bar bg-warning text-mattBlackDark" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                25
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 my-3">
-                                    <div class="bg-mattBlackLight px-3 py-3">
-                                        <h4 class="mb-2">New Projects</h4>
-                                        <div class="progress" style="height: 16px;">
-                                            <div class="progress-bar bg-info text-mattBlackDark" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                50
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 my-3">
-                                    <div class="bg-mattBlackLight p-3">
-                                        <h4 class="mb-2">Completed</h4>
-                                        <div class="progress" style="height: 16px;">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                80
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="bg-mattBlackLight my-2 p-3">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ratione libero totam rerum eos nam ab perspiciatis voluptatum
-                                        in. Quidem natus autem quae. Velit accusamus sit, perspiciatis
-                                        sunt earum tempora veniam.
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="bg-mattBlackLight my-2 p-3">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Ratione libero totam rerum eos nam ab perspiciatis voluptatum
-                                        in. Quidem natus autem quae. Velit accusamus sit, perspiciatis
-                                        sunt earum tempora veniam.
-                                    </div>
+                                <div class="col-12 text-center">
+                                    <h1 class="display-4 mt-3" style="color: #ecede8;"> <i> Arquitetos Cadastrados</i> </h1>
                                 </div>
                             </div>
 
--->
+                            <hr>
 
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-md-4 mb-3">
-                                        <input type="text" class="form-control" name="pesquisaNome" value="Nome">
-                                        <small id="emailHelp" class="form-text" style="color:#ecede8;">Pesquise pelo nome do profissional ou pela profissão.</small>
+                            <form name="cliente_pesquisa_serviços" action="_assets/_php/valida_pesquisa_cliente.php" method="POST">
+
+                                <div class="row ">
+                                    <div class="col-6 ml-1 mt-3">
+                                        <input type="text" id="name" name="name" value="Pesquise pelo Nome..." class="form-control" maxlength="50" size="50" required>
                                     </div>
-                                    <div class="col-md-2 mb-3 ">
-                                        <select class="custom-select" id="validationCustom04" required>
-                                            <option selected disabled value="">Profissão...</option>
-                                            <option>Todas</option>
-                                            <option>Arquiteto</option>
-                                            <option>Bombeiro Civil</option>
-                                            <option>Decorador</option>
-                                            <option>Designer</option>
-                                            <option>Engenheiro</option>
-                                            <option>Projetista</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2 mb-3 mr-auto ">
+                                    <div class="col-2 mt-3 mr-auto ">
                                         <button type="submit" class="btn" style="background-color: #FE7E01; color:#ecede8;">Pesquisar</button>
                                     </div>
                                 </div>
                             </form>
 
 
-                            <div class="row" style="color:#ecede8;">
-                                <div class="col-sm-4 col-xs-6 mt-4 text-center ">
-                                    <p><i class="fas fa-drafting-compass display-3" style="color:#ecede8;"></i></p>
-                                    <p>Arquitetos</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
-                                <p><i class="fas fa-hard-hat display-3" style="color:#ecede8;"></i></p>
-                                    <p>Engenheiros</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
-                                <p><i class="fas fa-swatchbook display-3" style="color:#ecede8;"></i></p>
-                                    <p>Designers</p>
-                                </div>
-                                <div class="col-sm-4  col-xs-6 mt-4 text-center">
-                                    <p><i class="fas fa-ruler-combined display-3" style="color:#ecede8;"></i></p>
-                                    <p>Projetistas</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-6 mt-4 text-center">
-                                    <p><i class="fa fa-fire-extinguisher display-3" style="color:#ecede8;" aria-hidden="true"></i></p>
-                                    <p>Bombeiros Civis</p>
-                                </div>
-                                <div class="col-sm-4  col-xs-6 mt-4 text-center">
-                                    <p><i class="fas fa-chair display-3" style="color:#ecede8;"></i></p>
-                                    <p>Decoradores</p>
-                                </div>
-                            </div>
-
-
-
-
                             <div class="row">
                                 <div class="col-sm-6 col-md-4 my-3 mx-auto">
                                     <div class="card  mb-5">
@@ -422,7 +253,14 @@ $atividade = "Ativo";
                             </div>
 
 
+                            <hr>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <small class="mt-3" style="color: #ecede8;">porTAAL Arquitetura by <a style="color: #212121;" href="https://github.com/Aquinolima">Thiago Aquino</a></small>
+                                </div>
+                            </div>
 
+                        </div>
                     </main>
                 </div>
 

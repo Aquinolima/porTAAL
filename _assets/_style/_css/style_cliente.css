@@ -84,7 +84,7 @@
   width: 250px;
   transition: all ease 0.25s;
   transform: translateX(-100%);
-  z-index: 2000;
+  z-index: 1000;
   box-shadow: 0 15px 20px black;
 }
 .wrapper .content {
@@ -139,7 +139,7 @@
 }
 .nav-link:hover, .nav-link.active {
   background-color: #f5f8fa;
-  border-left: 8px solid #FE7E01;
+  border-left: 8px solid;
 }
 .nav-link:hover .icon, .nav-link.active .icon {
   margin-right: 6px;

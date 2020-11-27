@@ -19,7 +19,7 @@ $colors: ('mattBlackLight': '#f8f9fa',
     'mattBlueDark': '#287384',
     'mattGrayLight': '#F9FAF5',
     'mattOrange': '#FE7E01',
-   'mattGrayLigth2': '#f5f8fa'
+    'mattGrayLigth2': '#f5f8fa'
 );
 
 @each $colorName,
@@ -50,8 +50,8 @@ body {
         width: 250px;
         transition: all ease .25s;
         transform: translateX(-100%);
-        z-index: 2000;
-        box-shadow: 0 15px 20px  black;
+        z-index: 1000;
+        box-shadow: 0 15px 20px black;
     }
 
     .content {
@@ -126,18 +126,20 @@ body {
 
     &:hover,
     &.active {
-       
+
         background-color: #f5f8fa;
-        border-left: 8px solid  #FE7E01;
-        
+        border-left: 8px solid ;
+
 
         .icon {
             margin-right: 6px;
             margin-left: 12px;
             font-size: 42px;
-            color: #9ec7d0;;
-            
+            color: #9ec7d0;
+            ;
+
         }
+
         .text {
             font-weight: bold;
             font-size: 18px;
@@ -150,5 +152,4 @@ body {
     width: 100%;
     padding: 5px;
 }
-
 

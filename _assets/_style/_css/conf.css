@@ -1,0 +1,19 @@
+#editaCliente{
+    color:#ecede8;
+}
+.servico p{
+    color:#ecede8;
+}
+.servico:hover {
+    -webkit-transform: scale(1.5) !important;
+    -ms-transform: scale(1.5) !important;
+    transform: scale(1.5) !important;
+}
+.navbar {
+    z-index: 1000;
+   }
+.modal {
+    z-index: 3000;
+   }
+
+ 
