@@ -6,16 +6,51 @@ session_start();
 
 if (isset($_SESSION["codigo"])) {
     echo $_SESSION["codigo"];
-    echo $_SESSION["nome"];
+    echo $_SESSION["nome_cliente_serviço"];
 } else {
     header('location:erro_de_login.php');
 };
 
-$nome = $_SESSION["nome"];
-$id = $_SESSION["codigo"];
-$email = $_SESSION["email"];
-
 $atividade = "Ativo";
+
+
+$id = $_SESSION["codigo"];
+
+
+
+$executa2 = "SELECT * FROM perfil_serviço WHERE codigo=$id";
+
+$query = $conn->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+    $nome = $dados->nome_cliente_serviço;
+    $sobrenome = $dados->sobrenome_cliente_serviço;
+    $profissão = $dados->profissão_cliente_serviço;
+    $cpf = $dados->cpf_cliente_serviço;
+    $rg = $dados->rg_cliente_serviço;
+    $telefone = $dados->telefone_cliente_serviço;
+    $celular = $dados->celular_cliente_serviço;
+    $email = $dados->email_cliente_serviço;
+    $pass = $dados->senha_cliente_serviço;
+    $senha = $dados->senha_cliente_serviço;
+    $cep = $dados->cep_cliente_serviço;
+    $endereço = $dados->endereço_cliente_serviço;
+    $cidade = $dados->cidade_cliente_serviço;
+    $estado = $dados->estado_cliente_serviço;
+    $img_perfil = $dados->img_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_perfil_cliente_serviço;
+    $port_img_2 = $dados->port2_perfil_cliente_serviço;
+    $port_img_3 = $dados->port3_perfil_cliente_serviço;
+    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $espec = $dados->espec_cliente_serviço;
+    $descrição = $dados->descrição_cliente_serviço;
+    $face = $dados->cliente_serviço_face;
+    $insta = $dados->cliente_serviço_insta;
+    $twitter = $dados->cliente_serviço_twitter;
+    $linkedin = $dados->cliente_serviço_linkedin;
+}
+$query->free(); // libera a memória do servidor após cada consulta.
 
 ?>
 <!doctype html>
@@ -80,7 +115,7 @@ $atividade = "Ativo";
                             <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="logo porTAAL">
                             <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                                 <?php
-                                echo $nome;
+                                echo $nome . " " . $sobrenome;
                                 ?>
                             </div>
                             <div class="text px-3" style="color: #212121; font-size: 14px;">
@@ -136,19 +171,10 @@ $atividade = "Ativo";
                                 <b> Profissão </b>
                                 <br>
                                 <?php
-                                echo $nome;
+                                echo $profissão;
                                 ?>
                             </div>
 
-                            <br>
-
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> Localização </b>
-                                <br>
-                                <?php
-                                echo $nome;
-                                ?>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,9 +361,9 @@ $atividade = "Ativo";
                             <p><img src="_assets/_img/card_pac.png" alt="imgpac"></p>
                             <p>Nós preparamos uma lista de Natal para presentear você. Mas não se preocupe, tudo o que queremos é dar dicas para sua estratégia de vendas. É mais do que hora de arregaçar as mangas e começar a trabalhar.</p>
                             <hr>
-                            <p>Clique no link abaixo para ver a lista completa.</p>    
+                            <p>Clique no link abaixo para ver a lista completa.</p>
                             <a href="https://www.sebrae.com.br/sites/PortalSebrae/artigos/entao-e-natal-o-que-fazer-para-vender-mais,4119985409a75710VgnVCM1000004c00210aRCRD" class="card-link" style="color: #287384;"> <b> Ver Lista </b></a>
-                     </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                         </div>

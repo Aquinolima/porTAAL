@@ -6,16 +6,51 @@ session_start();
 
 if (isset($_SESSION["codigo"])) {
     echo $_SESSION["codigo"];
-    echo $_SESSION["nome"];
+    echo $_SESSION["nome_cliente_serviço"];
 } else {
     header('location:erro_de_login.php');
 };
 
-$nome = $_SESSION["nome"];
-$id = $_SESSION["codigo"];
-$email = $_SESSION["email"];
-
 $atividade = "Ativo";
+
+
+$id = $_SESSION["codigo"];
+
+
+
+$executa2 = "SELECT * FROM perfil_serviço WHERE codigo=$id";
+
+$query = $conn->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+    $nome = $dados->nome_cliente_serviço;
+    $sobrenome = $dados->sobrenome_cliente_serviço;
+    $profissão = $dados->profissão_cliente_serviço;
+    $cpf = $dados->cpf_cliente_serviço;
+    $rg = $dados->rg_cliente_serviço;
+    $telefone = $dados->telefone_cliente_serviço;
+    $celular = $dados->celular_cliente_serviço;
+    $email = $dados->email_cliente_serviço;
+    $pass = $dados->senha_cliente_serviço;
+    $senha = $dados->senha_cliente_serviço;
+    $cep = $dados->cep_cliente_serviço;
+    $endereço = $dados->endereço_cliente_serviço;
+    $cidade = $dados->cidade_cliente_serviço;
+    $estado = $dados->estado_cliente_serviço;
+    $img_perfil = $dados->img_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_perfil_cliente_serviço;
+    $port_img_2 = $dados->port2_perfil_cliente_serviço;
+    $port_img_3 = $dados->port3_perfil_cliente_serviço;
+    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $espec = $dados->espec_cliente_serviço;
+    $descrição = $dados->descrição_cliente_serviço;
+    $face = $dados->cliente_serviço_face;
+    $insta = $dados->cliente_serviço_insta;
+    $twitter = $dados->cliente_serviço_twitter;
+    $linkedin = $dados->cliente_serviço_linkedin;
+}
+$query->free(); // libera a memória do servidor após cada consulta.
 
 ?>
 <!doctype html>
@@ -65,7 +100,7 @@ $atividade = "Ativo";
                         <span class="text"> Perfil</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="dash_clientes_serviços_perfilbusca.php">Seu Perfil</a>
+                        <a class="dropdown-item" href="dash_clientes_serviços_perfilbusca.php">Seu Perfil</a>
                         <a class="dropdown-item" href="dash_clientes_serviços_editar.php">Configurações</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -88,7 +123,7 @@ $atividade = "Ativo";
                         <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="img cliente">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
-                            echo $nome;
+                            echo $nome . " " . $sobrenome;
                             ?>
                         </div>
                         <div class="text px-3" style="color: #212121; font-size: 14px;">
@@ -145,20 +180,9 @@ $atividade = "Ativo";
                             <b> Profissão </b>
                             <br>
                             <?php
-                            echo $nome;
+                            echo $profissão;
                             ?>
                         </div>
-
-                        <br>
-
-                        <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                            <b> Localização </b>
-                            <br>
-                            <?php
-                            echo $nome;
-                            ?>
-                        </div>
-
 
                     </div>
                 </div>
@@ -184,10 +208,10 @@ $atividade = "Ativo";
                                 <form action="/action_page.php">
                                     <div class="row">
                                         <div class="col-12  text-center">
-                                            <label for="myfile">Selecione a imagem e depois clique em Alterar:</label>
+                                            <label for="img_perfil">Selecione a imagem e depois clique em Alterar:</label>
                                         </div>
                                         <div class="col-12  text-center">
-                                            <input type="file" id="myfile" name="myfile">
+                                            <input type="file" id="img_perfil" name="img_perfil_cliente_serviço">
                                         </div>
                                         <div class="col-12  text-center">
                                             <button type="submit" class="btn btn-md mt-4" style="background-color: #FE7E01; color: #f8f9fa;">Alterar</button>
@@ -199,33 +223,34 @@ $atividade = "Ativo";
 
                         </div>
 
-                        <form id="edita-cliente-form" name="edita-cliente-form" action="_assets/_php/grava_cadastro_cliente.php" method="POST">
+                        <form id="edita-cliente-form" name="edita-cliente-form" action="_assets/_php/cliente_serviço_altera_cadastro.php" method="POST">
+                            <input type="text" name="txtcodigo" value="<?php echo $id; ?>" style="display: none;">
                             <div class="row justify-content-center mb-2 mx-3">
                                 <div class="form-row">
                                     <div class="form-group col-sm-6">
                                         <label for="inputNome">Seu Nome</label>
-                                        <input type="text" name="nome_cliente" class="form-control" id="inputNome" placeholder="Nome" required>
+                                        <input type="text" value="<?php echo $nome; ?>" name="nome_cliente_serviço" class="form-control" id="inputNome" placeholder="Nome" required>
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label for="inputSobrenome">Seu Sobrenome</label>
-                                        <input type="text" name="sobrenome_cliente" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+                                        <input type="text" value="<?php echo $sobrenome; ?>" name="sobrenome_cliente_serviço" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                     </div>
                                     <div class="form-group col-sm-12">
                                         <label for="inputEnd">Seu Endereço</label>
-                                        <input type="text" name="endereço_cliente" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
+                                        <input type="text" value="<?php echo $endereço; ?>" name="endereço_cliente_serviço" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="inputCep">Seu CEP</label>
-                                        <input type="text" name="cep_cliente" class="form-control" id="inputCep" placeholder="Cep" required>
+                                        <input type="text" value="<?php echo $cep; ?>" name="cep_cliente_serviço" class="form-control" id="inputCep" placeholder="Cep" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="inputCidade">Sua Cidade</label>
-                                        <input type="text" name="cidade_cliente" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                                        <input type="text" value="<?php echo $cidade; ?>" name="cidade_cliente_serviço" class="form-control" id="inputCidade" placeholder="Cidade" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="selectEst">Seu Estado</label>
-                                        <select name="estado_cliente" id="selectEst" class="form-control" required>
-                                            <option value="..." selected>Escolha ...</option>
+                                        <select name="estado_cliente_serviço" id="selectEst" class="form-control" required>
+                                            <option value="<?php echo $estado; ?>" selected><?php echo $estado; ?></option>
                                             <option value="AC">Acre</option>
                                             <option value="AL">Alagoas</option>
                                             <option value="AP">Amapá</option>
@@ -258,45 +283,103 @@ $atividade = "Ativo";
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="inputTel">Seu Telefone</label>
-                                        <input type="text" name="telefone_cliente" class="form-control" id="inputTel" placeholder="Telefone" required>
+                                        <input type="text" value="<?php echo $telefone; ?>" name="telefone_cliente_serviço" class="form-control" id="inputTel" placeholder="Telefone" required>
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="inputCel">Seu Celular</label>
-                                        <input type="text" name="celular_cliente" class="form-control" id="inputCel" placeholder="Celular" required>
+                                        <input type="text" value="<?php echo $celular; ?>" name="celular_cliente_serviço" class="form-control" id="inputCel" placeholder="Celular" required>
                                     </div>
 
                                     <div class="form-group col-sm-3">
                                         <label for="rgCliente">Seu Rg </label>
-                                        <input type="text" name="rg_cliente" class="form-control" id="rgCliente" placeholder="Rg" required>
+                                        <input type="text" value="<?php echo $rg; ?>" name="rg_cliente_serviço" class="form-control" id="rgCliente" placeholder="Rg" required>
                                     </div>
 
                                     <div class="form-group col-sm-3">
                                         <label for="cpfCliente">Seu CPF </label>
-                                        <input type="text" name="cpf_cliente" class="form-control" id="cpfCliente" placeholder="CPF" required>
+                                        <input type="text" value="<?php echo $cpf; ?>" name="cpf_cliente_serviço" class="form-control" id="cpfCliente" placeholder="CPF" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
                                         <label for="inputEmail">Seu E-mail </label>
-                                        <input type="text" name="email_cliente" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                        <input type="text" value="<?php echo $email; ?>" name="email_cliente_serviço" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
                                         <label for="inputPass">Sua Senha </label>
-                                        <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
+                                        <input type="password" value="<?php echo $pass; ?>" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
-                                    <label for="inputProf">Sua Profissão</label>
-                                    <select name="profissão_cliente_serviço" id="inputProf" class="form-control" required>
-                                        <option value="..." selected>Escolha ...</option>
-                                        <option value="AC">Arquiteto</option>
-                                        <option value="AL">Decorador</option>
-                                        <option value="AP">Designer</option>
-                                        <option value="AM">Engenheiro</option>
-                                        <option value="BA">Projetista</option>
-                                        <option value="CE">Outros</option>
-                                    </select>
-                                </div>
+                                        <label for="inputProf">Sua Profissão</label>
+                                        <select name="profissão_cliente_serviço" id="inputProf" class="form-control" required>
+                                            <option value="<?php echo $profissão; ?>" selected><?php echo $profissão; ?></option>
+                                            <option value="Arquiteto">Arquiteto</option>
+                                            <option value="Decorador">Decorador</option>
+                                            <option value="Designer">Designer</option>
+                                            <option value="Engenheiro">Engenheiro</option>
+                                            <option value="Projetista">Projetista</option>
+                                            <option value="Outros">Outros</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-12">
+                                        <label for="basic-url">Redes social</label>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <div class=" mb-1">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">
+                                                        <h3><i class="fab fa-facebook-f mx-3 my-auto"></i></h3>
+                                                    </span>
+                                                </div>
+                                                <input type="text" value="<?php echo $face; ?>" class="form-control" placeholder="https://www.facebook.com/..." name="cliente_serviço_face" aria-describedby="basic-addon3">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6">
+                                        <div class=" mb-1">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">
+                                                        <h3><i class="fab fa-instagram mx-3 my-auto"></i></h3>
+                                                    </span>
+                                                </div>
+                                                <input type="text" value="<?php echo $insta; ?>" class="form-control" placeholder="https://www.instagram.com/..." name="cliente_serviço_insta" aria-describedby="basic-addon3">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6">
+                                        <div class=" mb-1">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">
+                                                        <h3><i class="fab fa-twitter mx-3 my-auto"></i></h3>
+                                                    </span>
+                                                </div>
+                                                <input type="text" value="<?php echo $twitter; ?>" class="form-control" placeholder="https://twitter.com/..." name="cliente_serviço_twitter" aria-describedby="basic-addon3">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6">
+                                        <div class=" mb-1">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">
+                                                        <h3><i class="fab fa-linkedin mx-3 my-auto"></i></h3>
+                                                    </span>
+                                                </div>
+                                                <input type="text" value="<?php echo $linkedin; ?>" class="form-control" placeholder="https://www.linkedin.com/in/..." name="cliente_serviço_linkedin" aria-describedby="basic-addon3">
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group col-sm-4">
                                         <div class="form-check mt-3">

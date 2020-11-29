@@ -171,14 +171,14 @@
                         <p>Bem-vindo ao sistema porTAAL! <br>Sigite seu email e senha para entrar.</p>
                     </div>
                     <hr>
-                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_clientes.php" method="POST">
                         <div class="form-group">
-                            <label for="loginAdm" class="col-form-label">Login:</label>
-                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                            <label for="loginClientes" class="col-form-label">Email:</label>
+                            <input type="text" name="loginClientes" class="form-control" id="loginClientes">
                         </div>
                         <div class="form-group">
-                            <label for="senhaAdm" class="col-form-label">Senha:</label>
-                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
+                            <label for="senhaClientes" class="col-form-label">Senha:</label>
+                            <input type="password" name="senhaClientes" class="form-control" id="senhaClientes">
                         </div>
                         <div class="modal-footer ">
                             <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>
@@ -209,14 +209,14 @@
                         <p>Bem-vindo ao sistema porTAAL! <br>Sigite seu email e senha para entrar.</p>
                     </div>
                     <hr>
-                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_adm.php" method="POST">
+                    <form id="login-adm-form" name="login-adm-form" action="_assets/_php/valida_login_serviço.php" method="POST">
                         <div class="form-group">
-                            <label for="loginAdm" class="col-form-label">Login:</label>
-                            <input type="text" name="loginAdm" class="form-control" id="contact-name">
+                            <label for="loginServiço" class="col-form-label">E-mail:</label>
+                            <input type="text" name="loginServiço" class="form-control" id="loginServiço">
                         </div>
                         <div class="form-group">
-                            <label for="senhaAdm" class="col-form-label">Senha:</label>
-                            <input type="password" name="senhaAdm" class="form-control" id="contact-phone">
+                            <label for="senhaServiço" class="col-form-label">Senha:</label>
+                            <input type="password" name="senhaServiço" class="form-control" id="senhaServiço">
                         </div>
                         <div class="modal-footer ">
                             <button type="button" class="btn btn-md " style="background-color: #9B2B39; color: #f8f9fa;" data-dismiss="modal">Fechar</button>

@@ -6,16 +6,50 @@ session_start();
 
 if (isset($_SESSION["codigo"])) {
     echo $_SESSION["codigo"];
-    echo $_SESSION["nome"];
+    echo $_SESSION["nome_cliente_serviço"];
 } else {
     header('location:erro_de_login.php');
 };
 
-$nome = $_SESSION["nome"];
-$id = $_SESSION["codigo"];
-$email = $_SESSION["email"];
-
 $atividade = "Ativo";
+
+
+$id = $_SESSION["codigo"];
+
+
+
+$executa2 = "SELECT * FROM perfil_serviço WHERE codigo=$id";
+
+$query = $conn->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+    $nome = $dados->nome_cliente_serviço;
+    $sobrenome = $dados->sobrenome_cliente_serviço;
+    $profissão = $dados->profissão_cliente_serviço;
+    $cpf = $dados->cpf_cliente_serviço;
+    $rg = $dados->rg_cliente_serviço;
+    $telefone = $dados->telefone_cliente_serviço;
+    $celular = $dados->celular_cliente_serviço;
+    $email = $dados->email_cliente_serviço;
+    $senha = $dados->senha_cliente_serviço;
+    $cep = $dados->cep_cliente_serviço;
+    $endereço = $dados->endereço_cliente_serviço;
+    $cidade = $dados->cidade_cliente_serviço;
+    $estado = $dados->estado_cliente_serviço;
+    $img_perfil = $dados->img_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_perfil_cliente_serviço;
+    $port_img_2 = $dados->port2_perfil_cliente_serviço;
+    $port_img_3 = $dados->port3_perfil_cliente_serviço;
+    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $espec = $dados->espec_cliente_serviço;
+    $descrição = $dados->descrição_cliente_serviço;
+    $face = $dados->cliente_serviço_face;
+    $insta = $dados->cliente_serviço_insta;
+    $twitter = $dados->cliente_serviço_twitter;
+    $linkedin = $dados->cliente_serviço_linkedin;
+}
+$query->free(); // libera a memória do servidor após cada consulta.
 
 ?>
 <!doctype html>
@@ -88,7 +122,7 @@ $atividade = "Ativo";
                         <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="img Cliente">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
-                            echo $nome;
+                            echo $nome . " " .  $sobrenome;
                             ?>
                         </div>
                         <div class="text px-3" style="color: #212121; font-size: 14px;">
@@ -145,17 +179,7 @@ $atividade = "Ativo";
                             <b> Profissão </b>
                             <br>
                             <?php
-                            echo $nome;
-                            ?>
-                        </div>
-
-                        <br>
-
-                        <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                            <b> Localização </b>
-                            <br>
-                            <?php
-                            echo $nome;
+                            echo $profissão;
                             ?>
                         </div>
 
@@ -190,25 +214,33 @@ $atividade = "Ativo";
                                     <div>
                                         <h5 class="modal-title">
                                             <?php
-                                            echo $nome;
+                                            echo $nome . " " . $sobrenome;
                                             ?> -
                                             <?php
-                                            echo $nome;
+                                            echo $profissão;
                                             ?></h5>
                                     </div>
                                     <div class="col-4  text-center pt-2 justify-content-center">
                                         <div class="row">
                                             <div class="col-1 mt-2">
-                                                <a href="https://facebook.com"><img src="_assets/_icons/_social/001-facebook.png" alt="logo Facebook" width="25px"></a>
+                                                <a href="<?php
+                                                            echo $face;
+                                                            ?>"><img src="_assets/_icons/_social/001-facebook.png" alt="logo Facebook" width="25px"></a>
                                             </div>
                                             <div class="col-1 pt-2">
-                                                <a href="https://instagram.com"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
+                                                <a href="<?php
+                                                            echo $insta;
+                                                            ?>"><img src="_assets/_icons/_social/011-instagram.png" alt="logo Instagram" width="25px"></a>
                                             </div>
                                             <div class="col-1 pt-2">
-                                                <a href="https://twitter.com"><img src="_assets/_icons/_social/002-twitter.png" alt="logo Twitter" width="25px"></a>
+                                                <a href="<?php
+                                                            echo $twitter;
+                                                            ?>"><img src="_assets/_icons/_social/002-twitter.png" alt="logo Twitter" width="25px"></a>
                                             </div>
                                             <div class="col-1 pt-2">
-                                                <a href="https://www.linkedin.com/"><img src="_assets/_icons/_social/010-linkedin.png" alt="logo Twitter" width="25px"></a>
+                                                <a href="<?php
+                                                            echo $linkedin;
+                                                            ?>"><img src="_assets/_icons/_social/010-linkedin.png" alt="logo Twitter" width="25px"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -225,18 +257,29 @@ $atividade = "Ativo";
                                             <div class="col-12">
                                                 <h4>Sobre Você:</h4>
                                                 <h6>Descreva sua formação e caracteristicas suas como profissional.</h6>
-                                                <form action="#" method="post">
+                                                <form action="_assets/_php/cliente_serviço_altera_perfil.php" method="post">
+                                                    <input type="text" name="txtcodigo" value="<?php echo $id; ?>" style="display: none;">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" id="caracteristicaProfissional" name="txt_serviços" rows="10">
-Sou um arquiteto e urbanista formado pela Universidade Guarulhos.
+                                                        <textarea class="form-control" id="caracteristicaProfissional" name="descrição_cliente_serviço" cols="30" rows="10" placeholder="- Modelo - 
+Sou um arquiteto e urbanista formado pela Faculdade Eniac.
 Minha experiência inclui o desenho e gerenciamento de projetos, análise e interpretação de dados e o desenvolvimento e implementação de processos construtivos.
 Gosto de gerar novas ideias e desenvolver soluções viáveis para problemas amplamente relevantes.
 Meus colegas me descreveriam como uma pessoa motivada e engenhosa, que mantém uma atitude positiva e proativa diante das adversidades.
 Atualmente, estou buscando oportunidades que me permitam desenvolver e promover idéias projetos únicos e modernos.
-Os campos de especialidade incluem projetos em geral e maquetes 3D.</textarea>
+"><?php
+    echo $descrição;
+    ?>
+</textarea>
+
                                                     </div>
                                             </div>
-                                            <div class="col-12  text-center pt-2">
+                                            <div class="form-group  col-12 col-sm-8">
+                                                <label for="especialização_serviços">Sua Especialização</label>
+                                                <input type="text" value="<?php
+                                                                            echo $espec;
+                                                                            ?>" name="especialização_cliente_serviço" class="form-control" placeholder="Escreva suas principais especializações" id="especialização_serviços"></input>
+                                            </div>
+                                            <div class="col-4 mt-3 text-center pt-2">
                                                 <button type="submit" class="btn btn-info">Salvar Descrição</button>
                                             </div>
                                             </form>
@@ -262,7 +305,7 @@ Os campos de especialidade incluem projetos em geral e maquetes 3D.</textarea>
                                                                 <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
                                                             </div>
                                                             <label for="port1">Imagem 1</label>
-                                                            <input type="file" class="form-control-file" id="port1">
+                                                            <input type="file" class="form-control-file" id="port1" name="port1_perfil_cliente_serviço">
                                                             <button type="submit" class="btn btn-info">Salvar Imagem 1</button>
                                                         </div>
                                                     </form>
@@ -275,8 +318,8 @@ Os campos de especialidade incluem projetos em geral e maquetes 3D.</textarea>
 
                                                                 <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
                                                             </div>
-                                                            <label for="port1">Imagem 2</label>
-                                                            <input type="file" class="form-control-file" id="port1">
+                                                            <label for="port2">Imagem 2</label>
+                                                            <input type="file" class="form-control-file" id="port2" name="port2_perfil_cliente_serviço">
                                                             <button type="submit" class="btn btn-info">Salvar Imagem 2</button>
                                                         </div>
                                                     </form>
@@ -289,8 +332,8 @@ Os campos de especialidade incluem projetos em geral e maquetes 3D.</textarea>
 
                                                                 <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
                                                             </div>
-                                                            <label for="port1">Imagem 3</label>
-                                                            <input type="file" class="form-control-file" id="port1">
+                                                            <label for="port3">Imagem 3</label>
+                                                            <input type="file" class="form-control-file" id="port3" name="port3_perfil_cliente_serviço">
                                                             <button type="submit" class="btn btn-info">Salvar Imagem 3</button>
                                                         </div>
                                                     </form>
@@ -303,8 +346,8 @@ Os campos de especialidade incluem projetos em geral e maquetes 3D.</textarea>
 
                                                                 <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
                                                             </div>
-                                                            <label for="port1">Imagem 4</label>
-                                                            <input type="file" class="form-control-file" id="port1">
+                                                            <label for="port4">Imagem 4</label>
+                                                            <input type="file" class="form-control-file" id="port4" name="port4_perfil_cliente_serviço">
                                                             <button type="submit" class="btn btn-info">Salvar Imagem 4</button>
                                                         </div>
                                                     </form>

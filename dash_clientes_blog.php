@@ -6,16 +6,42 @@ session_start();
 
 if (isset($_SESSION["codigo"])) {
     echo $_SESSION["codigo"];
-    echo $_SESSION["nome"];
+    echo $_SESSION["nome_cliente"];
 } else {
     header('location:erro_de_login.php');
 };
 
-$nome = $_SESSION["nome"];
-$id = $_SESSION["codigo"];
-$email = $_SESSION["email"];
-
 $atividade = "Ativo";
+
+
+$id = $_SESSION["codigo"];
+
+
+
+$executa2 = "SELECT * FROM perfil_cliente WHERE codigo=$id";
+
+$query = $conn->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+        $nome = $dados->nome_cliente;
+        $sobrenome = $dados->sobrenome_cliente;
+        $cpf = $dados->cpf_cliente;
+        $rg = $dados->rg_cliente;
+        $telefone = $dados->telefone_cliente;
+        $celular = $dados->celular_cliente;
+        $email = $dados->email_cliente;
+        $senha = $dados->senha_cliente;
+        $cep = $dados->cep_cliente;
+        $endereço = $dados->endereço_cliente;
+        $cidade = $dados->cidade_cliente;
+        $estado = $dados->estado_cliente;
+        $img_perfil = $dados->img_perfil_cliente;
+        $data = $dados->data_cadastro_cliente;
+      
+        
+}
+$query->free(); // libera a memória do servidor após cada consulta.
 
 ?>
 <!doctype html>
@@ -80,7 +106,7 @@ $atividade = "Ativo";
                             <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="logo porTAAL">
                             <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                                 <?php
-                                echo $nome;
+                                echo $nome . " " . $sobrenome;
                                 ?>
                             </div>
                             <div class="text px-3" style="color: #212121; font-size: 14px;">
@@ -133,20 +159,10 @@ $atividade = "Ativo";
                             <br>
 
                             <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                                <b> Último Serviço </b>
-                                <br>
-                                <?php
-                                echo $nome;
-                                ?>
-                            </div>
-
-                            <br>
-
-                            <div class="text px-3" style="color: #212121;  font-size: 14px;">
                                 <b> Localização </b>
                                 <br>
                                 <?php
-                                echo $nome;
+                                echo $cidade . "/" . $estado;
                                 ?>
                             </div>
                         </div>

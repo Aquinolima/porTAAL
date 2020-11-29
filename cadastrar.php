@@ -179,6 +179,8 @@
                                     <label for="inputSobrenome">Seu Sobrenome</label>
                                     <input type="text" name="sobrenome_cliente" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                 </div>
+
+                                <!-- 
                                 <div class="form-group col-sm-12">
                                     <label for="inputEnd">Seu Endereço</label>
                                     <input type="text" name="endereço_cliente" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
@@ -233,9 +235,14 @@
                                     <label for="inputCel">Seu Celular</label>
                                     <input type="text" name="celular_cliente" class="form-control" id="inputCel" placeholder="Celular" required>
                                 </div>
+                                -->
                                 <div class="form-group col-sm-6">
                                     <label for="inputEmail">Seu E-mail </label>
                                     <input type="text" name="email_cliente" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="inputPass">Sua Senha </label>
+                                    <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
                                 </div>
 
                                 <div class="form-group col-sm-6">
@@ -251,10 +258,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-sm-6">
-                                    <label for="inputPass">Sua Senha </label>
-                                    <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
-                                </div>
+                               
 
 
                                 <div class="modal-footer ">
@@ -297,30 +301,35 @@
                         <div class="row justify-content-center mb-5 mx-3">
 
                             <div class="form-row">
-                                <div class="form-group col-sm-6">
+                                <div class="form-group col-sm-4">
                                     <label for="inputNome">Seu Nome</label>
                                     <input type="text" name="nome_cliente_serviço" class="form-control" id="inputNome" placeholder="Nome" required>
                                 </div>
-                                <div class="form-group col-sm-6">
+                                
+                                <div class="form-group col-sm-4">
                                     <label for="inputSobrenome">Seu Sobrenome</label>
                                     <input type="text" name="sobrenome_cliente_serviço" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                 </div>
+                                <!-- 
                                 <div class="form-group col-sm-8">
                                     <label for="inputEnd">Seu Endereço</label>
                                     <input type="text" name="endereço_cliente_serviço" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
                                 </div>
+                                -->
                                 <div class="form-group col-sm-4">
                                     <label for="inputProf">Sua Profissão</label>
                                     <select name="profissão_cliente_serviço" id="inputProf" class="form-control" required>
                                         <option value="..." selected>Escolha ...</option>
-                                        <option value="AC">Arquiteto</option>
-                                        <option value="AL">Decorador</option>
-                                        <option value="AP">Designer</option>
-                                        <option value="AM">Engenheiro</option>
-                                        <option value="BA">Projetista</option>
-                                        <option value="CE">Outros</option>
+                                        <option value="Arquiteto">Arquiteto</option>
+                                        <option value="Decorador">Decorador</option>
+                                        <option value="Designer">Designer</option>
+                                        <option value="Engenheiro">Engenheiro</option>
+                                        <option value="Projetista">Projetista</option>
+                                        <option value="Outros">Outros</option>
                                     </select>
                                 </div>
+
+                                <!-- 
                                 <div class="form-group col-sm-4">
                                     <label for="inputCep">Seu CEP</label>
                                     <input type="text" name="cep_cliente_serviço" class="form-control" id="inputCep" placeholder="Cep" required>
@@ -371,11 +380,16 @@
                                     <label for="inputCel">Seu Celular</label>
                                     <input type="text" name="celular_cliente_serviço" class="form-control" id="inputCel" placeholder="Celular" required>
                                 </div>
+                                -->
                                 <div class="form-group col-sm-6">
                                     <label for="inputEmail">Seu E-mail </label>
                                     <input type="text" name="email_cliente_serviço" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                 </div>
-
+                                <div class="form-group col-sm-6">
+                                    <label for="inputPass">Sua Senha </label>
+                                    <input type="password" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
+                                </div>
+<!--
                                 <div class="form-group col-sm-6">
                                     <div class="form-check mt-3">
                                         <label class="form-check-label">
@@ -388,11 +402,8 @@
                                         </label>
                                     </div>
                                 </div>
-
-                                <div class="form-group col-sm-6">
-                                    <label for="inputPass">Sua Senha </label>
-                                    <input type="password" name="senha_cliente_serviço" class="form-control" id="inputPass" placeholder="Senha" required>
-                                </div>
+-->
+                                
 
 
                                 <div class="modal-footer ">

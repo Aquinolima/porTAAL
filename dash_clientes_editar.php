@@ -6,16 +6,40 @@ session_start();
 
 if (isset($_SESSION["codigo"])) {
     echo $_SESSION["codigo"];
-    echo $_SESSION["nome"];
+    echo $_SESSION["nome_cliente"];
 } else {
     header('location:erro_de_login.php');
 };
 
-$nome = $_SESSION["nome"];
-$id = $_SESSION["codigo"];
-$email = $_SESSION["email"];
-
 $atividade = "Ativo";
+
+
+$id = $_SESSION["codigo"];
+
+
+
+$executa2 = "SELECT * FROM perfil_cliente WHERE codigo=$id";
+
+$query = $conn->query($executa2);
+
+while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $query 
+{
+    $nome = $dados->nome_cliente;
+    $sobrenome = $dados->sobrenome_cliente;
+    $cpf = $dados->cpf_cliente;
+    $rg = $dados->rg_cliente;
+    $telefone = $dados->telefone_cliente;
+    $celular = $dados->celular_cliente;
+    $email = $dados->email_cliente;
+    $senha = $dados->senha_cliente;
+    $cep = $dados->cep_cliente;
+    $endereço = $dados->endereço_cliente;
+    $cidade = $dados->cidade_cliente;
+    $estado = $dados->estado_cliente;
+    $img_perfil = $dados->img_perfil_cliente;
+    $data = $dados->data_cadastro_cliente;
+}
+$query->free(); // libera a memória do servidor após cada consulta.
 
 ?>
 <!doctype html>
@@ -88,7 +112,7 @@ $atividade = "Ativo";
                         <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="img cliente">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
-                            echo $nome;
+                            echo $nome . " " . $sobrenome;
                             ?>
                         </div>
                         <div class="text px-3" style="color: #212121; font-size: 14px;">
@@ -142,20 +166,10 @@ $atividade = "Ativo";
                         <br>
 
                         <div class="text px-3" style="color: #212121;  font-size: 14px;">
-                            <b> Último Serviço </b>
-                            <br>
-                            <?php
-                            echo $nome;
-                            ?>
-                        </div>
-
-                        <br>
-
-                        <div class="text px-3" style="color: #212121;  font-size: 14px;">
                             <b> Localização </b>
                             <br>
                             <?php
-                            echo $nome;
+                            echo $cidade . "/" . $estado;
                             ?>
                         </div>
 
@@ -205,33 +219,34 @@ $atividade = "Ativo";
 
                         </div>
 
-                        <form id="edita-cliente-form" name="edita-cliente-form" action="_assets/_php/grava_cadastro_cliente.php" method="POST">
+                        <form id="edita-cliente-form" name="edita-cliente-form" action="_assets/_php/cliente_altera_cadastro.php" method="POST">
+                            <input type="text" name="txtcodigo" value="<?php echo $id; ?>" style="display: none;">
                             <div class="row justify-content-center mb-2 mx-3">
                                 <div class="form-row">
                                     <div class="form-group col-sm-6">
                                         <label for="inputNome">Seu Nome</label>
-                                        <input type="text" name="nome_cliente" class="form-control" id="inputNome" placeholder="Nome" required>
+                                        <input type="text" value="<?php echo $nome; ?>" name="nome_cliente" class="form-control" id="inputNome" placeholder="Nome" required>
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label for="inputSobrenome">Seu Sobrenome</label>
-                                        <input type="text" name="sobrenome_cliente" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+                                        <input type="text" value="<?php echo $sobrenome; ?>" name="sobrenome_cliente" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
                                     </div>
                                     <div class="form-group col-sm-12">
                                         <label for="inputEnd">Seu Endereço</label>
-                                        <input type="text" name="endereço_cliente" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
+                                        <input type="text" value="<?php echo $endereço; ?>" name="endereço_cliente" class="form-control" id="inputEnd" placeholder="Enderço completo" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="inputCep">Seu CEP</label>
-                                        <input type="text" name="cep_cliente" class="form-control" id="inputCep" placeholder="Cep" required>
+                                        <input type="text" value="<?php echo $cep; ?>" name="cep_cliente" class="form-control" id="inputCep" placeholder="Cep" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="inputCidade">Sua Cidade</label>
-                                        <input type="text" name="cidade_cliente" class="form-control" id="inputCidade" placeholder="Cidade" required>
+                                        <input type="text" value="<?php echo $cidade; ?>" name="cidade_cliente" class="form-control" id="inputCidade" placeholder="Cidade" required>
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="selectEst">Seu Estado</label>
                                         <select name="estado_cliente" id="selectEst" class="form-control" required>
-                                            <option value="..." selected>Escolha ...</option>
+                                            <option value="<?php echo $estado; ?>" selected><?php echo $estado; ?></option>
                                             <option value="AC">Acre</option>
                                             <option value="AL">Alagoas</option>
                                             <option value="AP">Amapá</option>
@@ -264,31 +279,31 @@ $atividade = "Ativo";
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="inputTel">Seu Telefone</label>
-                                        <input type="text" name="telefone_cliente" class="form-control" id="inputTel" placeholder="Telefone" required>
+                                        <input type="text" value="<?php echo $telefone; ?>" name="telefone_cliente" class="form-control" id="inputTel" placeholder="Telefone" required>
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="inputCel">Seu Celular</label>
-                                        <input type="text" name="celular_cliente" class="form-control" id="inputCel" placeholder="Celular" required>
+                                        <input type="text" value="<?php echo $celular; ?>" name="celular_cliente" class="form-control" id="inputCel" placeholder="Celular" required>
                                     </div>
 
                                     <div class="form-group col-sm-3">
                                         <label for="rgCliente">Seu Rg </label>
-                                        <input type="text" name="rg_cliente" class="form-control" id="rgCliente" placeholder="Rg" required>
+                                        <input type="text" value="<?php echo $rg; ?>" name="rg_cliente" class="form-control" id="rgCliente" placeholder="Rg" required>
                                     </div>
 
                                     <div class="form-group col-sm-3">
                                         <label for="cpfCliente">Seu CPF </label>
-                                        <input type="text" name="cpf_cliente" class="form-control" id="cpfCliente" placeholder="CPF" required>
+                                        <input type="text" value="<?php echo $cpf; ?>" name="cpf_cliente" class="form-control" id="cpfCliente" placeholder="CPF" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
                                         <label for="inputEmail">Seu E-mail </label>
-                                        <input type="text" name="email_cliente" class="form-control" id="inputEmail" placeholder="E-mail" required>
+                                        <input type="text" value="<?php echo $email; ?>" name="email_cliente" class="form-control" id="inputEmail" placeholder="E-mail" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
                                         <label for="inputPass">Sua Senha </label>
-                                        <input type="password" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
+                                        <input type="password" value="<?php echo $senha; ?>" name="senha_cliente" class="form-control" id="inputPass" placeholder="Senha" required>
                                     </div>
 
                                     <div class="form-group col-sm-4">
