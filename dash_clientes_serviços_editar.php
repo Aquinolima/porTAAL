@@ -39,10 +39,10 @@ while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $q
     $cidade = $dados->cidade_cliente_serviço;
     $estado = $dados->estado_cliente_serviço;
     $img_perfil = $dados->img_perfil_cliente_serviço;
-    $port_img_1 = $dados->port1_perfil_cliente_serviço;
-    $port_img_2 = $dados->port2_perfil_cliente_serviço;
-    $port_img_3 = $dados->port3_perfil_cliente_serviço;
-    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_serviço;
+    $port_img_2 = $dados->port2_serviço;
+    $port_img_3 = $dados->port3_serviço;
+    $port_img_4 = $dados->port4_serviço;
     $espec = $dados->espec_cliente_serviço;
     $descrição = $dados->descrição_cliente_serviço;
     $face = $dados->cliente_serviço_face;
@@ -120,7 +120,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                 <div class="sidebar">
 
                     <div class="mb-5">
-                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="img cliente">
+                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="img cliente">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
                             echo $nome . " " . $sobrenome;
@@ -202,22 +202,22 @@ $query->free(); // libera a memória do servidor após cada consulta.
 
                         <div class="row justify-content-center mb-3">
                             <div class="col-12 col-sm-4 col-md-4 col-lg-5 col-xl-5 text-center mr-auto">
-                                <img class="ml-4 mt-3 mr-4" style="width: 252px;" src="_assets/_img/card5.jpg" alt="img perfil cliente">
+                                <img class="ml-4 mt-3 mr-4" style="width: 252px;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="img perfil cliente">
                             </div>
                             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-left mr-2 pr-3 mt-3">
-                                <form action="/action_page.php">
+                            <form enctype="multipart/form-data" action="_assets/_php/upload_imagem_serviço.php " method="POST" >
+                                    <input type="text" name="codigo" value="<?php echo $id; ?>" style="display: none;">
                                     <div class="row">
                                         <div class="col-12  text-center">
-                                            <label for="img_perfil">Selecione a imagem e depois clique em Alterar:</label>
+                                            <label for="myfile">Selecione a imagem e depois clique em Alterar:</label>
                                         </div>
                                         <div class="col-12  text-center">
-                                            <input type="file" id="img_perfil" name="img_perfil_cliente_serviço">
+                                            <input type="file" require name="arquivo">
                                         </div>
                                         <div class="col-12  text-center">
-                                            <button type="submit" class="btn btn-md mt-4" style="background-color: #FE7E01; color: #f8f9fa;">Alterar</button>
+                                            <button type="submit" class="btn btn-md mt-4" value="Alterar" style="background-color: #FE7E01; color: #f8f9fa;">Alterar</button>
                                         </div>
                                     </div>
-
                                 </form>
                             </div>
 

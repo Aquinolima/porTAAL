@@ -111,7 +111,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                     <div class="sidebar">
 
                         <div class="mb-5">
-                            <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="logo porTAAL">
+                            <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="logo porTAAL">
                             <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                                 <?php
                                 echo $nome . " " . $sobrenome;
@@ -234,7 +234,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                     echo "<div class='row'>";
                                     echo "<div class='row my-3 mx-2'>";
                                     echo "<div class='col-12 col-md-6 col-lg-6 my-auto text-center'>";
-                                    echo "<img class='img-modal py-auto' src='_assets/_img/card5.jpg' alt='imagem-card'>";
+                                    echo "<img class='img-modal py-auto' src='_assets/_img/_upload/" .  $dados->img_perfil_cliente_serviço . "' alt='imagem-card'>";
                                     echo "</div>";
                                     echo "<div class='col-12  col-md-5 col-lg-5  my-3 mb-auto mx-3 text-center'>";
                                     echo " <div class='text-justify'>";
@@ -270,13 +270,13 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                     echo "<li data-target='#carouselExampleIndicators' data-slide-to='3'></li>";
                                     echo "</ol><div class='carousel-inner'>";
                                     echo "<div class='carousel-item active' style='width: 500px; height:350px;'>";
-                                    echo "<img class='d-block w-100' src='_assets/_img/card1.jpg' alt='First slide'>";
+                                    echo "<img class='d-block w-100' src='_assets/_img/_upload/" . $dados->port1_serviço . "' alt='First slide'>";
                                     echo "</div><div class='carousel-item' style='width: 500px; height:350px;'>";
-                                    echo "<img class='d-block w-100' src='_assets/_img/card2.jpg' alt='Second slide'>";
+                                    echo "<img class='d-block w-100' src='_assets/_img/_upload/" . $dados->port2_serviço . "' alt='Second slide'>";
                                     echo "</div><div class='carousel-item' style='width: 500px; height:350px;'>";
-                                    echo "<img class='d-block w-100' src='_assets/_img/card3.jpg' alt='Third slide'>";
+                                    echo "<img class='d-block w-100' src='_assets/_img/_upload/" . $dados->port3_serviço . "' alt='Third slide'>";
                                     echo "</div><div class='carousel-item' style='width: 500px; height:350px;'>";
-                                    echo "<img class='d-block w-100' src='_assets/_img/card4.jpg' alt='Forth slide'>";
+                                    echo "<img class='d-block w-100' src='_assets/_img/_upload/" . $dados->port4_serviço . "' alt='Forth slide'>";
                                     echo "</div></div>";
                                     echo "<a class='carousel-control-prev' href='#carouselExampleIndicators' role='button' data-slide='prev'>";
                                     echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";

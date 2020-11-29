@@ -111,7 +111,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                 <div class="sidebar">
 
                     <div class="mb-5">
-                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="logo porTAAL">
+                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="logo porTAAL">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
                             echo $nome . " " . $sobrenome;

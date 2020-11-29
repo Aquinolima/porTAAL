@@ -39,10 +39,10 @@ while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $q
     $cidade = $dados->cidade_cliente_serviço;
     $estado = $dados->estado_cliente_serviço;
     $img_perfil = $dados->img_perfil_cliente_serviço;
-    $port_img_1 = $dados->port1_perfil_cliente_serviço;
-    $port_img_2 = $dados->port2_perfil_cliente_serviço;
-    $port_img_3 = $dados->port3_perfil_cliente_serviço;
-    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_serviço;
+    $port_img_2 = $dados->port2_serviço;
+    $port_img_3 = $dados->port3_serviço;
+    $port_img_4 = $dados->port4_serviço;
     $espec = $dados->espec_cliente_serviço;
     $descrição = $dados->descrição_cliente_serviço;
     $face = $dados->cliente_serviço_face;
@@ -112,7 +112,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                 <div class="sideMenu bg-mattBlackDark" style="background-color: #ecede8;" id="menulateral">
                     <div class="sidebar">
                         <div class="mb-5">
-                            <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="logo porTAAL">
+                            <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="logo porTAAL">
                             <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                                 <?php
                                 echo $nome . " " . $sobrenome;

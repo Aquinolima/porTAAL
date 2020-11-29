@@ -38,10 +38,10 @@ while ($dados = $query->fetch_object()) //fetch_object lê linha por linha do $q
     $cidade = $dados->cidade_cliente_serviço;
     $estado = $dados->estado_cliente_serviço;
     $img_perfil = $dados->img_perfil_cliente_serviço;
-    $port_img_1 = $dados->port1_perfil_cliente_serviço;
-    $port_img_2 = $dados->port2_perfil_cliente_serviço;
-    $port_img_3 = $dados->port3_perfil_cliente_serviço;
-    $port_img_4 = $dados->port4_perfil_cliente_serviço;
+    $port_img_1 = $dados->port1_serviço;
+    $port_img_2 = $dados->port2_serviço;
+    $port_img_3 = $dados->port3_serviço;
+    $port_img_4 = $dados->port4_serviço;
     $espec = $dados->espec_cliente_serviço;
     $descrição = $dados->descrição_cliente_serviço;
     $face = $dados->cliente_serviço_face;
@@ -119,7 +119,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                 <div class="sidebar">
 
                     <div class="mb-5">
-                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/card5.jpg" alt="img Cliente">
+                        <img class="ml-4 my-3 mr-4" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="img Cliente">
                         <div class="text px-3" style="color: #FE7E01; font-weight: bold; font-size: 14px;">
                             <?php
                             echo $nome . " " .  $sobrenome;
@@ -252,7 +252,7 @@ $query->free(); // libera a memória do servidor após cada consulta.
                                         <div class="row">
                                             <div class="col-12 text-center">
 
-                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/_upload/<?php echo $img_perfil ?>" alt="imagem-card">
                                             </div>
                                             <div class="col-12">
                                                 <h4>Sobre Você:</h4>
@@ -294,65 +294,70 @@ Atualmente, estou buscando oportunidades que me permitam desenvolver e promover 
                                     <div class="row">
                                         <div class="col-12">
                                             <h4>Seu Portfólio:</h4>
-                                            <h6>Selecione até 4 Imagens para seu Portfólio.</h6>
+                                            <h6>Selecione as Imagens para seu Portfólio.</h6>
 
-                                            <div class="row">
-                                                <div class="col-6  text-center pt-2">
-                                                    <form class="form">
+                                            <form enctype="multipart/form-data" action="_assets/_php/upload_imagem_cliente.php " method="POST">
+                                                <div class="row">
+                                                    <div class="col-6  text-center pt-2">
                                                         <div class="form-group">
                                                             <div class="col-12 text-center">
 
-                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/_upload/<?php echo $port_img_1 ?>" alt="imagem-card">
                                                             </div>
                                                             <label for="port1">Imagem 1</label>
-                                                            <input type="file" class="form-control-file" id="port1" name="port1_perfil_cliente_serviço">
-                                                            <button type="submit" class="btn btn-info">Salvar Imagem 1</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                                            <input type="file" class="form-control-file" id="port1" value="port1.jpg" name="port1">
 
-                                                <div class="col-6  text-center pt-2">
-                                                    <form class="form">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-6  text-center pt-2">
+
                                                         <div class="form-group">
                                                             <div class="col-12 text-center">
 
-                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/_upload/<?php echo $port_img_2 ?>" alt="imagem-card">
                                                             </div>
                                                             <label for="port2">Imagem 2</label>
-                                                            <input type="file" class="form-control-file" id="port2" name="port2_perfil_cliente_serviço">
-                                                            <button type="submit" class="btn btn-info">Salvar Imagem 2</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                                            <input type="file" class="form-control-file" id="port2" value="port2.jpg"  name="port2">
 
-                                                <div class="col-6  text-center pt-2">
-                                                    <form class="form">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-6  text-center pt-2">
+
                                                         <div class="form-group">
                                                             <div class="col-12 text-center">
 
-                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/_upload/<?php echo $port_img_3 ?>" alt="imagem-card">
                                                             </div>
                                                             <label for="port3">Imagem 3</label>
-                                                            <input type="file" class="form-control-file" id="port3" name="port3_perfil_cliente_serviço">
-                                                            <button type="submit" class="btn btn-info">Salvar Imagem 3</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                                            <input type="file" class="form-control-file" id="port3" value="port3.jpg"  name="port3">
 
-                                                <div class="col-6  text-center pt-2">
-                                                    <form class="form">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-6  text-center pt-2">
+
                                                         <div class="form-group">
                                                             <div class="col-12 text-center">
 
-                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/card5.jpg" alt="imagem-card">
+                                                                <img class="img-modal py-auto" style="width: 70%;" src="_assets/_img/_upload/<?php echo $port_img_4 ?>" alt="imagem-card">
                                                             </div>
                                                             <label for="port4">Imagem 4</label>
-                                                            <input type="file" class="form-control-file" id="port4" name="port4_perfil_cliente_serviço">
-                                                            <button type="submit" class="btn btn-info">Salvar Imagem 4</button>
+                                                            <input type="file" class="form-control-file" id="port4" value="port4.jpg"  name="port4">
+
                                                         </div>
-                                                    </form>
+                                                    </div>
+
+                                                    <div class="col-12  text-center mt-3 pt-2">
+                                                        <hr>
+                                                        <button type="submit" class="btn btn-info">Salvar Imagens</button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
 
